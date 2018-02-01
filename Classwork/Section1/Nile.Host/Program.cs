@@ -18,15 +18,15 @@ namespace Nile.Host
                 char choice = DisplayMenu();
 
                 //process menu selection
-                switch (choice)
+                switch (Char.ToUpper(choice))
                 {
-                    case 'l':
+                   // case 'l':
                     case 'L': ListProducts(); break;
 
-                    case 'a':
+                    //case 'a':
                     case 'A': AddProduct(); break;
 
-                    case 'q':
+                    //case 'q':
                     case 'Q': quit = true; break;
                 };
             };
@@ -53,12 +53,16 @@ namespace Nile.Host
                 string value = Console.ReadLine();
 
                 if (Decimal.TryParse(value, out decimal result));
+                {
+                    //if not required or not empty
+                    if (result >= minValue)
+                        return result;
+                };
 
-                //if not required or not empty
-                if (result >= minValue)
-                    return result;
-
-                Console.WriteLine("Value must be >= {0}", minValue);
+                //formatting strings
+                string msg = String.Format("Value must be >= {0}", minValue);
+                Console.WriteLine(msg);
+                //Console.WriteLine("Value must be >= {0}", minValue);
             } while (true);
         }
 
@@ -88,11 +92,29 @@ namespace Nile.Host
 
                 string input = Console.ReadLine();
 
-                if (input == "L" || input == "l")
+                //remove whitespace
+                input = input.Trim();
+
+                //input.ToLower();
+                input = input.ToUpper();
+
+                //padding (similar to setw in c++)
+                //input = input.PadLeft(10);
+
+                //starts with
+                //input.StartsWith(@"\");
+                //ends with
+                //input.EndsWith(@"\");
+
+                //substring
+                //string newValue = input.Substring(0, 10);
+
+                //if (input == "L")
+                if (String.Compare(input, "L", true) == 0)
                     return input[0];
-                else if (input == "A" || input == "a")
+                else if (input == "A")
                     return input[0];
-                else if (input == "Q" || input == "q")
+                else if (input == "Q")
                     return input[0];
                 
                 Console.WriteLine("Please choose a valid option");
@@ -102,12 +124,31 @@ namespace Nile.Host
         static void ListProducts()
         {
             //are there any products
-            if (_name != null && _name != "")
+            //if (_name != null && _name != "")
+            if (!String.IsNullOrEmpty(_name))
             {
-                //display a product
-                Console.WriteLine(_name);
-                Console.WriteLine("${0}", _price);
+                //display a product - name [$price]
+                //                    <description>
+
+                //string formatting
+                //var msg = String.Format("{0} [${1}]", _name, _price);
+
+                //string concatenation
+                //var msg = _name + " [$" + _price + "]";
+
+                //string concat pt2
+                //var msg = String.Concat(_name, " [$", _price, "]");
+
+                //string interpolation
+                string msg = $"{_name} [${_price}]";
+
+                Console.WriteLine(msg);
+                //Console.WriteLine(_name);
+                //Console.WriteLine("${0}", _price);
+
+                if (!String.IsNullOrEmpty(_description))
                 Console.WriteLine(_description);
+
             } else
                 Console.WriteLine("No Products");
         
