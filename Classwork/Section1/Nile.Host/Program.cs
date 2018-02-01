@@ -14,6 +14,9 @@ namespace Nile.Host
             bool quit = false;
             while (!quit)
             {
+                //equality
+                bool isEqual = quit.Equals(10);
+
                 //diplay menu
                 char choice = DisplayMenu();
 
