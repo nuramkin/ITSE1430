@@ -29,6 +29,17 @@ namespace NicholasUramkin.MovieLib.Host
 
         private static void RemoveMovie()
         {
+            if (String.IsNullOrEmpty(_title))
+            {
+                Console.WriteLine("There is no movie to delete");
+
+                Console.WriteLine("\nPress ENTER to continue");
+                Console.ReadLine();
+                Console.Clear();
+
+                return;
+            }
+
             Console.Write("Are you sure you want to delete the movie(Y/N)?: ");
 
             string input = Console.ReadLine();
@@ -55,6 +66,21 @@ namespace NicholasUramkin.MovieLib.Host
 
         static void AddMovie()
         {
+            if (!String.IsNullOrEmpty(_title))
+            {
+                Console.WriteLine("Movie already exists.  Do you want to overwrite it(Y/N)?");
+
+                string input = Console.ReadLine();
+
+                input = input.ToUpper();
+
+                Console.Clear();
+
+                if (input == "N")
+                    return;
+
+            }
+            
             //get title
             _title = ReadString("Enter title: ", true);
 
@@ -157,7 +183,7 @@ namespace NicholasUramkin.MovieLib.Host
 
                 Console.WriteLine("Status = {0}", owned);
             } else
-                Console.WriteLine("No Movies");
+                Console.WriteLine("No Movie");
 
             Console.WriteLine("\nPress ENTER to continue");
             Console.ReadLine();
@@ -169,7 +195,7 @@ namespace NicholasUramkin.MovieLib.Host
             do
             {
                 //output menu
-                Console.WriteLine("L)ist Movies");
+                Console.WriteLine("L)ist Movie");//made movies singular until we update program to hold multiple movies
                 Console.WriteLine("A)dd Movie");
                 Console.WriteLine("R)emove Movie");
                 Console.WriteLine("Q)uit");
