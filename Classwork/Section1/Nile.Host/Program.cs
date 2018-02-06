@@ -224,6 +224,35 @@ namespace Nile.Host
         {
             string message = "Hello";
             string name = null;
+
+            name = new string('*', 10);
+
+            object instance = name;
+
+            //casting
+            //is
+            if (instance is string)
+            {
+                string str2 = (string)instance;
+                Console.WriteLine(str2);
+            } else
+                Console.WriteLine("Not a string");
+
+            //as operator
+            string str = instance as string;
+            if (str != null)
+            {
+                Console.WriteLine(str);
+            } else
+                Console.WriteLine("Not a string");
+
+            //pattern matching
+            if (instance is string str3)
+            {
+                Console.WriteLine(str3);
+            } else
+                Console.WriteLine("Not a string");
+
         }
     }
 
