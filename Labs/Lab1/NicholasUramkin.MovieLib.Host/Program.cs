@@ -1,8 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Nicholas Uramkin
+ * 02/05/2018
+ * ITSE-1430
+ * Lab 1
+ * Program for adding, listing, and removing movies and their title, description, runtime, and ownership status to a library.  
+ * In this first version the program will only store one movie at a time.
+ * The program will call a function for displaying the menu, 
+ *  then take the user choice to call one of three functions that either add, remove, or list a movie.
+ * The adding function will call one of three reading functions corresponding to the data type being read, 
+ *  passing in a message to the user and whether that data is optional or not.
+ */
+using System;
 
 namespace NicholasUramkin.MovieLib.Host
 {

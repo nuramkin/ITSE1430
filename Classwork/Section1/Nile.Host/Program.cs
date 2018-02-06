@@ -219,5 +219,12 @@ namespace Nile.Host
             double ceiling = Math.Ceiling(rate);
             double floor = ceiling;
         }
+
+        static void PlayingWithReferences ()
+        {
+            string message = "Hello";
+            string name = null;
+        }
     }
+
 }
