@@ -23,6 +23,19 @@ namespace Nile.Windows
         {
         }
 
+        protected override void OnLoad( EventArgs e )
+        {
+            base.OnLoad(e);
+
+            //load product
+            if (Product != null)
+            {
+                _txtName.Text = Product.Name;
+                _txtDescription.Text = Product.Description;
+                _txtPrice.Text = Product.Price.ToString();
+                _chkIsDiscontinued.Checked = Product.IsDiscontinued;
+            }
+        }
         private void OnSave( object sender, EventArgs e )
         {
             //create product
