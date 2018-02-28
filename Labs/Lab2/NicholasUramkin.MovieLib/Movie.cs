@@ -1,8 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Nicholas Uramkin
+ * Lab 2
+ * ITSE 1430
+ * 2/26/2018
+ * Movie.cs
+ * Description: Windows Forms application that can add, edit, and remove a movie and its information.
+ * */
+
+using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
 namespace NicholasUramkin.MovieLib
 {
@@ -29,14 +37,12 @@ namespace NicholasUramkin.MovieLib
         /// <summary>Gets or sets Owned</summary>
         public bool Owned { get; set; }
 
-        /// <summary>Validation method for title and length<returns></returns>
+        /// <summary>Validation method for Title and Length.  Title cannot be null or empty and Length must be >= 0.<returns></returns>
         public string Validate()
         {
-            //Title is required
             if (String.IsNullOrEmpty(_title))
                 return "Title cannot be empty";
 
-            //Length >= 0
             if (Length < 0)
                 return "Length must be >= 0";
 

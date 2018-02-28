@@ -1,24 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/* Nicholas Uramkin
+ * Lab 2
+ * ITSE 1430
+ * 2/26/2018
+ * MainForm.cs
+ * */
+
+using System;
 using System.Windows.Forms;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
+//using System.Drawing;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
 namespace NicholasUramkin.MovieLib.Windows
 {
+    /// <summary>Class for MainForm</summary>
     public partial class MainForm : Form
     {
+        /// <summary>MainForm default constructor</summary>
         public MainForm()
         {
             InitializeComponent();
         }
-
-
-        private Movie _movie;
 
         private void OnFileExit( object sender, EventArgs e )
         {
@@ -31,12 +37,10 @@ namespace NicholasUramkin.MovieLib.Windows
 
             var form = new MovieDetailForm("Add Product");
 
-            //show form modally
             var result = form.ShowDialog(this);
             if (result != DialogResult.OK)
                 return;
 
-            //add the movie
             _movie = form.Movie;
             MessageBox.Show("Movie Added");
         }
@@ -51,12 +55,10 @@ namespace NicholasUramkin.MovieLib.Windows
             var form = new MovieDetailForm(_movie);
             form.Movie = _movie;
 
-            //show form modally
             var result = form.ShowDialog(this);
             if (result != DialogResult.OK)
                 return;
 
-            //edit the product
             _movie = form.Movie;
             MessageBox.Show("Edit Saved");
         }
@@ -72,7 +74,6 @@ namespace NicholasUramkin.MovieLib.Windows
             if (!ShowConfirmation("Are you sure?", "Remove Movie"))
                 return;
 
-            //remove movie
             _movie = null;
             MessageBox.Show("Movie removed");
         }
@@ -89,5 +90,7 @@ namespace NicholasUramkin.MovieLib.Windows
         {
             return MessageBox.Show(this, message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
+
+        private Movie _movie;
     }
 }
