@@ -33,7 +33,7 @@ namespace NicholasUramkin.MovieLib.Windows
 
         private void OnMoviesAdd( object sender, EventArgs e )
         {
-            var button = sender as ToolStripMenuItem;//test
+            var button = sender as ToolStripMenuItem;
 
             var form = new MovieDetailForm("Add Product");
 
