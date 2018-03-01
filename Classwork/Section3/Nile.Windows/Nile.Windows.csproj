@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5AECB822-28EF-454E-816D-450235FE7693}</ProjectGuid>
+    <ProjectGuid>{BD9C86BB-6D5E-4E80-9528-7BFB54CED37D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Nile.Windows</RootNamespace>
     <AssemblyName>Nile.Windows</AssemblyName>
@@ -90,11 +90,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nile.Data.Memory\Nile.Data.Memory.csproj">
-      <Project>{1868dcb5-dc9f-4f22-8262-d1fe8f3c162a}</Project>
+      <Project>{f95ae9be-fb3f-41c6-b6fe-a7a4c32edeff}</Project>
       <Name>Nile.Data.Memory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Nile\Nile.csproj">
-      <Project>{e3f069ac-fad2-48db-b796-265639407839}</Project>
+      <Project>{f3b8dd6e-7216-496a-bd6a-bee83dbf9cd4}</Project>
       <Name>Nile</Name>
     </ProjectReference>
   </ItemGroup>

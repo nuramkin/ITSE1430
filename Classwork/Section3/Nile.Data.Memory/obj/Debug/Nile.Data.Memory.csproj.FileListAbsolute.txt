@@ -1,8 +1,8 @@
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.dll
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.pdb
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.dll
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.pdb
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csprojResolveAssemblyReference.cache
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csproj.CoreCompileInputs.cache
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.dll
-C:\Users\nicholas.uramkin\source\repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.dll
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.dll
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csprojResolveAssemblyReference.cache
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csproj.CoreCompileInputs.cache
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.dll
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.pdb

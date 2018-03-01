@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Nile.Data.Memory
 {
-    /// <summary>Provides an in-memory product database</summary>
+    /// <summary>Provides an in-memory product database.</summary>
     public class MemoryProductDatabase
     {
         public MemoryProductDatabase()
         {
-            //seed products
             _products = new Product[25];
 
             var product = new Product();
@@ -33,74 +32,79 @@ namespace Nile.Data.Memory
             _products[2] = product;
         }
 
-        public Product Add ( Product product, out string message)
+        public Product Add ( Product product, out string message )
         {
-            //check for null
+            //Check for null
             if (product == null)
             {
                 message = "Product cannot be null.";
                 return null;
-            }
+            };
 
-            //validate product
+            //Validate product
             var error = product.Validate();
             if (!String.IsNullOrEmpty(error))
             {
                 message = error;
                 return null;
-            }
+            };
 
-            //todo: verify unique product
+            //TODO: Verify unique product
 
-            //add
+            //Add
             var index = FindEmptyProductIndex();
             if (index < 0)
             {
                 message = "Out of memory";
                 return null;
-            }
+            };
 
+            //TODO: Clone the object
             _products[index] = product;
             message = null;
+
+            //TODO: Return a copy
             return product;
-            
         }
 
-        public Product Edit( Product product, out string message )
+        public Product Edit ( Product product, out string message )
         {
-            //check for null
+            //Check for null
             if (product == null)
             {
                 message = "Product cannot be null.";
                 return null;
-            }
+            };
 
-            //validate product
+            //Validate product
             var error = product.Validate();
             if (!String.IsNullOrEmpty(error))
             {
                 message = error;
                 return null;
-            }
+            };
 
-            //todo: verify unique product except current product
+            //TODO: Verify unique product except current product
 
-            //find existing
+            //Find existing
             var existingIndex = GetById(product.Id);
             if (existingIndex < 0)
             {
-                message = "Product not found";
+                message = "Product not found.";
                 return null;
-            }
+            };
 
+            //TODO: Clone the object
             _products[existingIndex] = product;
             message = null;
-            return product;
 
+            //TODO: Return a copy
+            return product;
         }
 
         public Product[] GetAll ()
         {
+            //TODO: Return a copy so caller cannot change the underlying data
             return _products;
         }
 
@@ -111,7 +115,7 @@ namespace Nile.Data.Memory
                 var index = GetById(id);
                 if (index >= 0)
                     _products[index] = null;
-            }
+            };
         }
 
         private int FindEmptyProductIndex()
@@ -120,7 +124,7 @@ namespace Nile.Data.Memory
             {
                 if (_products[index] == null)
                     return index;
-            }
+            };
 
             return -1;
         }
@@ -131,7 +135,8 @@ namespace Nile.Data.Memory
             {
                 if (_products[index]?.Id == id)
                     return index;
-            }
+            };
+
             return -1;
         }
 
