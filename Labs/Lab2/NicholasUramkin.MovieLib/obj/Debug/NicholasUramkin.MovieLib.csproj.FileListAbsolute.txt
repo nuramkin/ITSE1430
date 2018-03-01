@@ -9,3 +9,9 @@ C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUram
 C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUramkin.MovieLib.csproj.CoreCompileInputs.cache
 C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUramkin.MovieLib.dll
 C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUramkin.MovieLib.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib\bin\Debug\NicholasUramkin.MovieLib.dll
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib\bin\Debug\NicholasUramkin.MovieLib.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUramkin.MovieLib.csprojResolveAssemblyReference.cache
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUramkin.MovieLib.csproj.CoreCompileInputs.cache
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUramkin.MovieLib.dll
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib\obj\Debug\NicholasUramkin.MovieLib.pdb

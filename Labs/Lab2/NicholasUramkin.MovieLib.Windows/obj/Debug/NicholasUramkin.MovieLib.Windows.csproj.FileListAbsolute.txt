@@ -26,3 +26,17 @@ C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\Nich
 C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.csproj.CoreCompileInputs.cache
 C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.exe
 C:\Users\Nick\Desktop\Lab 2\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\bin\Debug\NicholasUramkin.MovieLib.Windows.exe.config
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\bin\Debug\NicholasUramkin.MovieLib.Windows.exe
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\bin\Debug\NicholasUramkin.MovieLib.Windows.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\bin\Debug\NicholasUramkin.MovieLib.dll
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\bin\Debug\NicholasUramkin.MovieLib.pdb
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.csprojResolveAssemblyReference.cache
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.AboutBox.resources
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.MainForm.resources
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.MovieDetailForm.resources
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.Properties.Resources.resources
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.csproj.GenerateResource.Cache
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.csproj.CoreCompileInputs.cache
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.exe
+C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Labs\Lab2\NicholasUramkin.MovieLib.Windows\obj\Debug\NicholasUramkin.MovieLib.Windows.pdb
