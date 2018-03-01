@@ -26,6 +26,7 @@ namespace NicholasUramkin.MovieLib.Windows
             InitializeComponent();
         }
 
+        //exit application
         private void OnFileExit( object sender, EventArgs e )
         {
             Close();
