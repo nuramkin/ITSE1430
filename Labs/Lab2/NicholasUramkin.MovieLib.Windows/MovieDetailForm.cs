@@ -20,31 +20,32 @@ namespace NicholasUramkin.MovieLib.Windows
     /// <summary>Class for MovieDetailForm</summary>
     public partial class MovieDetailForm : Form
     {
-        /// <summary>MainForm default constructor</summary>
+        /// <summary>MovieDetailForm default constructor</summary>
         public MovieDetailForm()
         {
             InitializeComponent();
         }
 
-        /// <summary>MainForm constructor (passes in string title)</summary><param name="title"></param>
+        /// <summary>MovieDetailForm constructor (passes in string for titlebar)</summary><param name="title"></param>
         public MovieDetailForm( string title ) : this()
         {
             Text = title;
         }
 
-        /// <summary>MainForm constructor (passes in instance of Movie)</summary><param name="movie"></param>
+        /// <summary>MovieDetailForm constructor (passes in movie to edit)</summary><param name="movie"></param>
         public MovieDetailForm( Movie movie ) : this("Edit Movie")
         {
             Movie = movie;
         }
 
-        /// <summary>Gets or sets Movie</summary>
+        /// <summary>Gets or sets Movie being edited</summary>
         public Movie Movie { get; set; }
 
         protected override void OnLoad( EventArgs e )
         {
             base.OnLoad(e);
 
+            //load movie
             if (Movie != null)
             {
                 _txtTitle.Text = Movie.Title;
@@ -56,12 +57,14 @@ namespace NicholasUramkin.MovieLib.Windows
 
         private void OnSave( object sender, EventArgs e )
         {
+            //create movie
             var movie = new Movie();
             movie.Title = _txtTitle.Text;
             movie.Description = _txtDescription.Text;
             movie.Length = ConvertToLength(_txtLength);
             movie.Owned = _chkOwned.Checked;
 
+            //validate
             var message = movie.Validate();
             if (!String.IsNullOrEmpty(message))
             {
@@ -75,6 +78,7 @@ namespace NicholasUramkin.MovieLib.Windows
             Close();
         }
 
+        //converts length form textbox to integer
         private int ConvertToLength( TextBox control )
         {
             if (Int32.TryParse(control.Text, out var length))
@@ -88,11 +92,13 @@ namespace NicholasUramkin.MovieLib.Windows
             Close();
         }
 
+        //error window
         private void DisplayError( string message )
         {
             MessageBox.Show(this, message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+        //warning for empty title textbox
         private void _txtTitle_Validating( object sender, CancelEventArgs e )
         {
             var textbox = sender as TextBox;
@@ -105,6 +111,7 @@ namespace NicholasUramkin.MovieLib.Windows
                 _errorProvider.SetError(textbox, "");
         }
 
+        //warning for empty or invalid length textbox
         private void _txtLength_Validating( object sender, CancelEventArgs e )
         {
             var textbox = sender as TextBox;

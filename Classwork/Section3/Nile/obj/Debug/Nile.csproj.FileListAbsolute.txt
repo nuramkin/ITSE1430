@@ -3,3 +3,8 @@ C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile\bin\Debu
 C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile\obj\Debug\Nile.csproj.CoreCompileInputs.cache
 C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile\obj\Debug\Nile.dll
 C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile\obj\Debug\Nile.pdb
+C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile\bin\Debug\Nile.dll
+C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile\bin\Debug\Nile.pdb
+C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile\obj\Debug\Nile.csproj.CoreCompileInputs.cache
+C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile\obj\Debug\Nile.dll
+C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile\obj\Debug\Nile.pdb
