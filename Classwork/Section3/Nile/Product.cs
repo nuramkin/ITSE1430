@@ -46,18 +46,20 @@ namespace Nile
 
         /// <summary>Determines if the product is discontinued.</summary>
         public bool IsDiscontinued { get; set; }
-
+        
         public IEnumerable<ValidationResult> Validate( ValidationContext validationContext )
         {
             var errors = new List<ValidationResult>();
 
             //Name is required
             if (String.IsNullOrEmpty(_name))
-                errors.Add(new ValidationResult("Name cannot be empty", new[] { "Name" }));
+                errors.Add(new ValidationResult("Name cannot be empty", 
+                             new[] { "Name" }));
 
             //Price >= 0
             if (Price < 0)
-                errors.Add( new ValidationResult("Price must be >= 0", new [] { "Price" }));
+                errors.Add(new ValidationResult("Price must be >= 0",
+                            new[] { "Price" }));
 
             return errors;
         }

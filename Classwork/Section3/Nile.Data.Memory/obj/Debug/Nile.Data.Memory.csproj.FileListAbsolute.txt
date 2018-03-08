@@ -6,11 +6,3 @@ C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Mem
 C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csproj.CoreCompileInputs.cache
 C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.dll
 C:\Users\nicholas.uramkin\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.pdb
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.dll
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.Data.Memory.pdb
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.dll
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\bin\Debug\Nile.pdb
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csprojResolveAssemblyReference.cache
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.csproj.CoreCompileInputs.cache
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.dll
-C:\Users\Nick\Source\Repos\ITSE1430\Classwork\Section3\Nile.Data.Memory\obj\Debug\Nile.Data.Memory.pdb

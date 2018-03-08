@@ -46,7 +46,6 @@ namespace Nile.Windows
                 MessageBox.Show(message);
 
             RefreshUI();
-
             //Find empty array element
             //var index = FindEmptyProductIndex();
             //if (index >= 0)
@@ -86,7 +85,7 @@ namespace Nile.Windows
             //if (index < 0)
             //  return;
 
-            //Get selected product
+            //Get the selected product
             var product = GetSelectedProduct();
             if (product == null)
                 return;
@@ -109,6 +108,7 @@ namespace Nile.Windows
 
         private Product GetSelectedProduct ( )
         {
+            //Get the first selected row in the grid, if any
             if (dataGridView1.SelectedRows.Count > 0)
                 return dataGridView1.SelectedRows[0].DataBoundItem as Product;
 
@@ -119,7 +119,7 @@ namespace Nile.Windows
         {
             //Get products
             var products = _database.GetAll();
-            products[0].Name = "Product A";
+            //products[0].Name = "Product A";
             
             //Bind to grid
             dataGridView1.DataSource = products;
