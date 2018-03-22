@@ -22,12 +22,20 @@ namespace Nile.Data
             //Validate product using IValidatableObject
             //var error = product.Validate();
             var errors = ObjectValidator.Validate(product);
-            if (errors.Count() > 0)
+            //if (errors.Count() > 0)
+            //{
+            //    var error = Enumerable.First(errors);
+
+            //    //Get first error
+            //    message = errors.ElementAt(0).ErrorMessage;
+            //    return null;
+            //};
+            var error = errors.FirstOrDefault();
+            if(error != null)
             {
-                //Get first error
-                message = errors.ElementAt(0).ErrorMessage;
+                message = error.ErrorMessage;
                 return null;
-            };
+            }
 
             //Verify unique product
             var existing = GetProductByNameCore(product.Name);

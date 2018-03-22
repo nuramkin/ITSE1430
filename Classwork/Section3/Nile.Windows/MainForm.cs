@@ -4,6 +4,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Nile.Data;
 using Nile.Data.Memory;
@@ -59,15 +60,17 @@ namespace Nile.Windows
             //Get selected product
             var product = GetSelectedProduct();
             if (product == null)
+            {
+                MessageBox.Show(this, "No product selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
 
-            //var index = FindEmptyProductIndex() - 1;
-            //if (index < 0)
-            //    return;                        
-            //if (_product == null)
-            //    return;
+            EditProduct(product);
+        }
 
-            var form = new ProductDetailForm(product);            
+        private void EditProduct(Product product)
+        {
+            var form = new ProductDetailForm(product);
             var result = form.ShowDialog(this);
             if (result != DialogResult.OK)
                 return;
@@ -83,16 +86,20 @@ namespace Nile.Windows
 
         private void OnProductRemove( object sender, EventArgs e )
         {
-            //var index = FindEmptyProductIndex() - 1;
-            //if (index < 0)
-            //  return;
-
-            //Get the selected product
+            //Get selected product
             var product = GetSelectedProduct();
             if (product == null)
+            {
+                MessageBox.Show(this, "No product selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
 
-            if (!ShowConfirmation("Are you sure?", "Remove Product"))                             
+            DeleteProduct(product);
+        }
+
+        private void DeleteProduct( Product product )
+        {
+            if (!ShowConfirmation("Are you sure?", "Remove Product"))
                 return;
 
             //Remove product
@@ -100,8 +107,8 @@ namespace Nile.Windows
             //_products[index] = null;
 
             RefreshUI();
-        }        
-        
+        }
+
         private void OnHelpAbout( object sender, EventArgs e )
         {
             MessageBox.Show(this, "Not implemented", "Help About", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -124,7 +131,8 @@ namespace Nile.Windows
             //products[0].Name = "Product A";
 
             //Bind to grid
-            productBindingSource.DataSource = new List<Product>(products);
+            //productBindingSource.DataSource = new List<Product>(products);
+            productBindingSource.DataSource = Enumerable.ToList(products);
             //dataGridView1.DataSource = new List<Product>(products);
         }
 
@@ -136,5 +144,33 @@ namespace Nile.Windows
         }
 
         private IProductDatabase _database = new MemoryProductDatabase();
+
+        private void OnCellDoubleClick( object sender, DataGridViewCellEventArgs e )
+        {
+            var product = GetSelectedProduct();
+            if (product == null)
+                return;
+
+            EditProduct(product);
+        }
+
+        private void OnCellKeyDown( object sender, KeyEventArgs e )
+        {
+            var product = GetSelectedProduct();
+            if (product == null)
+                return;
+
+            if (e.KeyCode == Keys.Delete)
+            {
+                 e.Handled = true;
+                 DeleteProduct(product);
+                
+            }else if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                EditProduct(product);
+            }
+
+        }
     }
 }
