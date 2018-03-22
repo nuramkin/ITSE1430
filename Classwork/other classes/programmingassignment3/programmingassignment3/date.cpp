@@ -1,8 +1,10 @@
 #include "date.h"
 
-Date::Date(std::string month, std::string day, std::string year)
-{
-}
+Date::Date()
+{}
+
+Date::Date(std::string month, std::string day, std::string year) : month(month), day(day), year(year)
+{}
 
 std::string Date::getMonth()
 {

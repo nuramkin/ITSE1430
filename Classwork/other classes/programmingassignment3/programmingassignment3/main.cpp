@@ -3,25 +3,26 @@
 #include <fstream>
 #include <string>
 #include "todolist.h"
+#include "task.h"
 
 using namespace std;
 
-void AddTask();
-void ModifyTask();
-void RemoveTask();
-void DisplayByPriority();
-void DisplayByDate();
-void FilterOnOff();
-void SaveList();
-//void LoadList(string);
+//void AddTask();
+//void ModifyTask();
+//void RemoveTask();
+//void DisplayByPriority();
+//void DisplayByDate();
+//void FilterOnOff();
+//void SaveList();
+////void LoadList(string);
 
 int main()
 {
 	fstream file;
-	string fileName;
+	string fileName = "";
 	string test;
 	char choice;
-
+    bool filter = true;
 	ToDoList t;
 
 	
@@ -29,8 +30,11 @@ int main()
 	
 	for (int i = 1; i == 1;)
 	{
+        cout << "-------- TO DO LIST --------\n";
+        t.printTasks(filter);
+
 		//print menu
-		cout << "----- TO DO LIST MENU -----\n"
+		cout << "\n----- TO DO LIST MENU -----\n"
 			<< "        1. Add a new task\n"
 			<< "        2. Modify a task\n"
 			<< "        3. Remove a task\n"
@@ -52,31 +56,31 @@ int main()
 				break;
 
 			case '2':
-				ModifyTask();
+				//t.modifyTaskInList;
 				break;
 
 			case '3':
-				RemoveTask();
+                t.removeTaskFromList();
 				break;
 
 			case '4':
-				t.printTasksByPriority();
+				//t.sortTasksByPriority();
 				break;
 
 			case '5':
-				DisplayByDate();
+				//t.sortTasksByDate();
 				break;
 
 			case '6':
-				FilterOnOff();
+				filter = t.filterTasks(filter);
 				break;
 
 			case '7':
-				SaveList();
+				t.saveList(fileName);
 				break;
 
 			case '8':
-				t.loadList();
+				fileName = t.loadList();
 				break;
 
 			case '9':
@@ -143,34 +147,34 @@ int main()
 	return 0;
 }
 
-void AddTask()
-{
-}
-
-void ModifyTask()
-{
-}
-
-void RemoveTask()
-{
-}
-
-void DisplayByPriority()
-{
-}
-
-void DisplayByDate()
-{
-}
-
-void FilterOnOff()
-{
-}
-
-void SaveList()
-{
-}
-
-//void LoadList(string fileName)
+//void AddTask()
 //{
 //}
+//
+//void ModifyTask()
+//{
+//}
+//
+//void RemoveTask()
+//{
+//}
+//
+//void DisplayByPriority()
+//{
+//}
+//
+//void DisplayByDate()
+//{
+//}
+//
+//void FilterOnOff()
+//{
+//}
+//
+//void SaveList()
+//{
+//}
+//
+////void LoadList(string fileName)
+////{
+////}

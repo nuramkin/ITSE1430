@@ -1,7 +1,7 @@
 #include "task.h"
 
-Task::Task(std::string name, std::string date, int priority, bool isCompleted) 
-	: name(name), date(date), priority(priority), isCompleted(isCompleted)
+Task::Task(std::string name, int month, int day, int year, int priority, bool isCompleted) 
+	: name(name), month(month), day(day), year(year), priority(priority), isCompleted(isCompleted)
 {}
 
 std::string Task::getName()
@@ -9,9 +9,19 @@ std::string Task::getName()
 	return name;
 }
 
-std::string Task::getDate()
+int Task::getMonth()
 {
-	return date;
+    return month;
+}
+
+int Task::getDay()
+{
+    return day;
+}
+
+int Task::getYear()
+{
+    return year;
 }
 
 int Task::getPriority()
@@ -24,22 +34,22 @@ bool Task::getIsCompleted()
 	return isCompleted;
 }
 
-void Task::setName(std::string name)
-{
-	this->name = name;
-}
-
-void Task::setDate(std::string date)
-{
-	this->date = date;
-}
-
-void Task::setPriority(int priority)
-{
-	this->priority = priority;
-}
-
-void Task::setIsCompleted(bool isCompleted)
-{
-	this->isCompleted = isCompleted;
-}
+//void Task::setName(std::string name)
+//{
+//	this->name = name;
+//}
+//
+//void Task::setDate(Date date)
+//{
+//	this->date = date;
+//}
+//
+//void Task::setPriority(int priority)
+//{
+//	this->priority = priority;
+//}
+//
+//void Task::setIsCompleted(bool isCompleted)
+//{
+//	this->isCompleted = isCompleted;
+//}

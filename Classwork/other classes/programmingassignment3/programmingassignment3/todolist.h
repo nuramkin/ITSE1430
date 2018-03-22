@@ -5,6 +5,7 @@
 #include<string>
 #include<string>
 #include "task.h"
+#include "date.h"
 
 class ToDoList
 {
@@ -18,10 +19,11 @@ public:
 	void addTaskToList();
 	void removeTaskFromList();
 	void modifyTaskInList();
-	void printTasksByPriority();
+	void printTasks(bool filter);
 	void printTasksByDate();
-	void saveList();
-	void loadList();
+    bool filterTasks(bool filter);
+	void saveList(std::string fileName);
+	std::string loadList();
 
 };
 

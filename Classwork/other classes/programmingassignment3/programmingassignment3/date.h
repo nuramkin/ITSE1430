@@ -3,6 +3,7 @@
 
 #include<string>
 
+//date class
 class Date
 {
 private:
@@ -11,6 +12,7 @@ private:
 	std::string year;
 
 public:
+    Date();
 	Date(std::string month, std::string day, std::string year);
 
 	//getters
