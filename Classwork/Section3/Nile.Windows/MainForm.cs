@@ -132,7 +132,8 @@ namespace Nile.Windows
 
             //Bind to grid
             //productBindingSource.DataSource = new List<Product>(products);
-            productBindingSource.DataSource = Enumerable.ToList(products);
+            //productBindingSource.DataSource = Enumerable.ToList(products);
+            productBindingSource.DataSource = products.ToList();
             //dataGridView1.DataSource = new List<Product>(products);
         }
 

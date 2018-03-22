@@ -20,8 +20,8 @@ namespace Nile.Data
             };
 
             //Validate product using IValidatableObject
-            //var error = product.Validate();
-            var errors = ObjectValidator.Validate(product);
+            var errors = product.Validate();
+            //var errors = ObjectValidator.Validate(product);
             //if (errors.Count() > 0)
             //{
             //    var error = Enumerable.First(errors);
