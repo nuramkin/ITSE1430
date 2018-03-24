@@ -3,7 +3,6 @@
 #define _TASK_H_
 
 #include<string>
-#include "date.h"
 
 class Task
 {
@@ -16,21 +15,24 @@ private:
 	bool isCompleted;
 
 public:
+    //constructor
 	Task(std::string name, int month, int day, int year, int priority, bool isCompleted);
 	
 	//getters
-	std::string getName();
-	int getMonth();
-    int getDay();
-    int getYear();
-	int getPriority();
+	std::string getName() const;
+	int getMonth() const;
+    int getDay() const;
+    int getYear() const;
+	int getPriority() const;
 	bool getIsCompleted();
 
 	//setters
-	/*void setName(std::string name);
-	void setDate(Date date);
+	void setName(std::string name);
+	void setMonth(int month);
+    void setDay(int day);
+    void setYear(int year);
 	void setPriority(int priority);
-	void setIsCompleted(bool isCompleted);*/
+	void setIsCompleted(bool isCompleted);
 
 };
 

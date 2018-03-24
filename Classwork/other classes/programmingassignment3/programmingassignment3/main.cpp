@@ -1,37 +1,22 @@
 #include <iostream>
-#include <iomanip>
 #include <fstream>
 #include <string>
 #include "todolist.h"
-#include "task.h"
 
 using namespace std;
 
-//void AddTask();
-//void ModifyTask();
-//void RemoveTask();
-//void DisplayByPriority();
-//void DisplayByDate();
-//void FilterOnOff();
-//void SaveList();
-////void LoadList(string);
-
 int main()
 {
-	fstream file;
-	string fileName = "";
-	string test;
-	char choice;
-    bool filter = true;
-	ToDoList t;
-
+	string fileName = "";//empty string tells save method to make new file
+    bool filter = false;//filter is basically an on/off switch for filtering out completed tasks
+	ToDoList tdl;//instantiating ToDoList class to access its methods
+    char choice;
 	
-
-	
-	for (int i = 1; i == 1;)
+	while(true)
 	{
+        //print title and list of tasks(if any)
         cout << "-------- TO DO LIST --------\n";
-        t.printTasks(filter);
+        tdl.printTasks(filter);
 
 		//print menu
 		cout << "\n----- TO DO LIST MENU -----\n"
@@ -47,44 +32,45 @@ int main()
 			
 
 		cin >> choice;
+        cout << endl << endl;
 
 
 		switch (choice)
 		{
 			case '1':
-				t.addTaskToList();
+				tdl.addTaskToList();
 				break;
 
 			case '2':
-				//t.modifyTaskInList;
+				tdl.modifyTaskInList();
 				break;
 
 			case '3':
-                t.removeTaskFromList();
+                tdl.removeTaskFromList();
 				break;
 
 			case '4':
-				//t.sortTasksByPriority();
+				tdl.sortTasksByPriority();
 				break;
 
 			case '5':
-				//t.sortTasksByDate();
+				tdl.sortTasksByDate();
 				break;
 
 			case '6':
-				filter = t.filterTasks(filter);
-				break;
+				filter = tdl.filterTasks(filter);//passes filter in to be turned on or off
+				break;                         //returns filter to be passed into printTasks
 
 			case '7':
-				t.saveList(fileName);
+				fileName = tdl.saveList(fileName);
 				break;
 
 			case '8':
-				fileName = t.loadList();
+				fileName = tdl.loadList(fileName);
 				break;
 
 			case '9':
-				i++;
+				return false;
 				break;
 
 			default :
@@ -93,88 +79,6 @@ int main()
 		}
 		system("CLS");
 	}
-	
-
-		/*cout << "Do you want to (L)oad a list or make a (N)ew list?: ";
-
-		cin >> choice;
-
-		if (choice == 'L' || choice == 'l')
-		{
-
-			cout << "Please enter filename: ";
-
-			cin >> fileName;
-
-			fileName = fileName + ".txt";
-
-			file.open(fileName);
-
-			file >> test;
-
-			cout << endl << test << endl << endl;
-
-			file.close();
-
-			system("pause");
-		}
-
-		else
-		{
-			cout << "Please name file: ";
-			cin >> fileName;
-
-			fileName = fileName + ".txt";
-
-
-
-			file.open(fileName, fstream::out);
-
-			file << "new file";
-
-			cout << endl << endl;
-
-			file.close();
-		}
-
-		cout << "Do you want to quit?(Y/N): ";
-		cin >> choice;
-		cout << endl << endl;
-
-		if (choice == 'Y' || choice == 'y')
-			break;*/
-
 	return 0;
 }
 
-//void AddTask()
-//{
-//}
-//
-//void ModifyTask()
-//{
-//}
-//
-//void RemoveTask()
-//{
-//}
-//
-//void DisplayByPriority()
-//{
-//}
-//
-//void DisplayByDate()
-//{
-//}
-//
-//void FilterOnOff()
-//{
-//}
-//
-//void SaveList()
-//{
-//}
-//
-////void LoadList(string fileName)
-////{
-////}

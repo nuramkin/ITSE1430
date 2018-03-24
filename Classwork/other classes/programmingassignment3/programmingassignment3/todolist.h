@@ -3,27 +3,26 @@
 
 #include<list>
 #include<string>
-#include<string>
 #include "task.h"
-#include "date.h"
 
 class ToDoList
 {
 private:
-	std::list<Task> tasks;
+	std::list<Task> tasks;// list of Task objects
 
 public:
-	ToDoList();
-	ToDoList(std::string fileName);
-
 	void addTaskToList();
 	void removeTaskFromList();
 	void modifyTaskInList();
 	void printTasks(bool filter);
-	void printTasksByDate();
+    void sortTasksByPriority();
+	void sortTasksByDate();
     bool filterTasks(bool filter);
-	void saveList(std::string fileName);
-	std::string loadList();
+	std::string saveList(std::string fileName);
+	std::string loadList(std::string fileName);
+    std::string convertMonth(int month);
+    bool testInput();
+    
 
 };
 

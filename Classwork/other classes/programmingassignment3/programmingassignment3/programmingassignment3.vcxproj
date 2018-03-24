@@ -115,13 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="date.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="task.cpp" />
     <ClCompile Include="todolist.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="date.h" />
     <ClInclude Include="task.h" />
     <ClInclude Include="todolist.h" />
   </ItemGroup>
