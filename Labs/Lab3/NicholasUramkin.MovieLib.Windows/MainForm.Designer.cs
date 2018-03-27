@@ -41,11 +41,12 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.movieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lengthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ownedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.movieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._mainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieBindingSource)).BeginInit();
@@ -143,7 +144,8 @@
             this.titleDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.lengthDataGridViewTextBoxColumn,
-            this.ownedDataGridViewCheckBoxColumn});
+            this.ownedDataGridViewCheckBoxColumn,
+            this.Id});
             this.dataGridView1.DataSource = this.movieBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -157,10 +159,6 @@
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(684, 337);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // movieBindingSource
-            // 
-            this.movieBindingSource.DataSource = typeof(NicholasUramkin.MovieLib.Movie);
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -189,6 +187,17 @@
             this.ownedDataGridViewCheckBoxColumn.HeaderText = "Owned";
             this.ownedDataGridViewCheckBoxColumn.Name = "ownedDataGridViewCheckBoxColumn";
             this.ownedDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // movieBindingSource
+            // 
+            this.movieBindingSource.DataSource = typeof(NicholasUramkin.MovieLib.Movie);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -229,6 +238,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lengthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ownedDataGridViewCheckBoxColumn;
         private System.Windows.Forms.BindingSource movieBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
     }
 }
 
