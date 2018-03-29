@@ -28,18 +28,29 @@ namespace Nile.Data.IO
 
         private void SaveData()
         {
-            var stream = File.OpenWrite(_filename);
-            var writer = new StreamWriter(stream);
-
-            foreach(var item in _items)
+            try
             {
-                var line = $"{item.Id},{item.Name},{item.Description},{item.Price},{(item.IsDiscontinued ? 1 : 0)}";
+                var stream = File.OpenWrite(_filename);
+                var writer = new StreamWriter(stream);
 
-                writer.WriteLine(line);
+                foreach (var item in _items)
+                {
+                    var line = $"{item.Id},{item.Name},{item.Description},{item.Price},{(item.IsDiscontinued ? 1 : 0)}";
+
+                    writer.WriteLine(line);
+                }
+
+                writer.Close();
+                stream.Close();
+            }catch(ArgumentException e)
+            {
+                //never right!!
+                //throw e;
+                throw;
+            }catch(Exception e)
+            {
+                throw new Exception("Save failed", e);
             }
-
-            writer.Close();
-            stream.Close();
         }
 
         private void SaveDataNonstream()
@@ -83,26 +94,33 @@ namespace Nile.Data.IO
         {
             var items = new List<Product>();
 
-            //make sure the file exists
-            if (!File.Exists(_filename))
-                return items;
-
-            var lines = File.ReadAllLines(_filename);
-            foreach(var line in lines)
+            try
             {
-                var fields = line.Split(',');
+                //make sure the file exists
+                if (!File.Exists(_filename))
+                    return items;
 
-                //not checking for missing fields here
-                var product = new Product() {
-                    Id = ParseInt32(fields[0]),
-                    Name = fields[1],
-                    Description = fields[2],
-                    Price = ParseDecimal(fields[3]),
-                    IsDiscontinued = ParseDecimal(fields[4]) != 0
-                };
-                items.Add(product);
+                var lines = File.ReadAllLines(_filename);
+                foreach (var line in lines)
+                {
+                    var fields = line.Split(',');
+
+                    //not checking for missing fields here
+                    var product = new Product() {
+                        Id = ParseInt32(fields[0]),
+                        Name = fields[1],
+                        Description = fields[2],
+                        Price = ParseDecimal(fields[3]),
+                        IsDiscontinued = ParseDecimal(fields[4]) != 0
+                    };
+                    items.Add(product);
+                }
+
+                return items;
+            }catch(Exception e)
+            {
+                throw new Exception("Failure loading data", e);
             }
-            return items;
         }
 
         private decimal ParseDecimal(string value)

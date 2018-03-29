@@ -76,9 +76,17 @@ namespace Nile.Windows
                 return;
 
             //Add to database
-            _database.Add(form.Product, out var message);
-            if (!String.IsNullOrEmpty(message))
-                MessageBox.Show(message);
+            //_database.Add(form.Product);
+            try
+            {
+                _database.Add(null);
+            }catch (NotImplementedException)
+            {
+                MessageBox.Show("not implemented yet");
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             RefreshUI();
         }
@@ -126,7 +134,14 @@ namespace Nile.Windows
                 return;
 
             //Remove product
-            _database.Remove(product.Id);
+
+            try
+            {
+                _database.Remove(product.Id);
+            }catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
             RefreshUI();
         }
@@ -141,9 +156,14 @@ namespace Nile.Windows
 
             //Update the product
             form.Product.Id = product.Id;
-            _database.Update(form.Product, out var message);
-            if (!String.IsNullOrEmpty(message))
-                MessageBox.Show(message);
+
+            try
+            {
+                _database.Update(form.Product, out var message);
+            }catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
 
             RefreshUI();
         }
@@ -160,8 +180,15 @@ namespace Nile.Windows
         private void RefreshUI ()
         {
             //Get products
-            var products = _database.GetAll();
-            productBindingSource.DataSource = products.ToList();
+            IEnumerable<Product> products = null;
+            try
+            {
+                products = _database.GetAll();
+            }catch (Exception)
+            {
+                MessageBox.Show("Error loading products");
+            }
+            productBindingSource.DataSource = products?.ToList();
         }
 
         private bool ShowConfirmation ( string message, string title )
