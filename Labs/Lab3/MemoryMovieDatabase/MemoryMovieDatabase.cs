@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* Nicholas Uramkin
+ * Lab 3
+ * ITSE 1430
+ * 3/26/2018
+ * MemoryMovieDatabase.cs
+ * */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +12,18 @@ using System.Threading.Tasks;
 
 namespace NicholasUramkin.MovieLib.Data.Memory
 {
+    /// <summary>
+    /// In-memory movie database
+    /// </summary>
     public class MemoryMovieDatabase : MovieDatabase
     {
+        /// <summary>
+        /// Initializes instance of MemoryProductDatabase
+        /// </summary>
         public MemoryMovieDatabase()
         {
-            MovieDatabaseExtensions.Seed(this);
+            //seeds in sample movies on launch for testing program
+            //MovieDatabaseExtensions.Seed(this);
         }
 
         protected override Movie AddCore (Movie movie)
@@ -25,6 +38,7 @@ namespace NicholasUramkin.MovieLib.Data.Memory
 
         protected override IEnumerable<Movie> GetAllCore()
         {
+            //for each movie in list of movies
             foreach (var movie in _movies)
             {
                 if (movie != null)
@@ -32,6 +46,7 @@ namespace NicholasUramkin.MovieLib.Data.Memory
             }
         }
 
+        //searches for matching ID, returns null if there isn't a match
         protected override Movie GetCore( int id )
         {
             foreach (var movie in _movies)
@@ -53,11 +68,14 @@ namespace NicholasUramkin.MovieLib.Data.Memory
         {
             var existing = GetCore(movie.Id);
 
+            //clones object
             Copy(existing, movie);
 
+            //returns the copy
             return movie;
         }
 
+        //searches for matching title name, returns null if there isn't a match
         protected override Movie GetMovieByTitleCore( string title )
         {
             foreach (var movie in _movies)
@@ -68,7 +86,7 @@ namespace NicholasUramkin.MovieLib.Data.Memory
             return null;
         }
 
-        //clone movie
+        //clone movie (returns copied movie)
         private Movie Clone (Movie item)
         {
             var newMovie = new Movie();
@@ -77,6 +95,7 @@ namespace NicholasUramkin.MovieLib.Data.Memory
             return newMovie;
         }
 
+        //copy movie from one object to another
         private void Copy (Movie target, Movie source)
         {
             target.Id = source.Id;

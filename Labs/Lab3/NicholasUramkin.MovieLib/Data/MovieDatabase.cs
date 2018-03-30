@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* Nicholas Uramkin
+ * Lab 3
+ * ITSE 1430
+ * 3/26/2018
+ * MovieDatabase.cs
+ * */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +12,17 @@ using System.Threading.Tasks;
 
 namespace NicholasUramkin.MovieLib.Data
 {
+    /// <summary>
+    /// Base implementation for IProductDatabase
+    /// </summary>
     public abstract class MovieDatabase : IMovieDatabase
     {
+        /// <summary>
+        /// Adds new movie
+        /// </summary>
+        /// <param name="movie">movie being added</param>
+        /// <param name="message">error message</param>
+        /// <returns>the added movie</returns>
         public Movie Add( Movie movie, out string message )
         {
             //check for null
@@ -35,21 +50,35 @@ namespace NicholasUramkin.MovieLib.Data
                 return null;
             }
 
-            message = null;
+            message = null;//null for no error
             return AddCore(movie);
         }
 
+        /// <summary>
+        /// Gets all movies
+        /// </summary>
+        /// <returns>list of movies</returns>
         public IEnumerable<Movie> GetAll()
         {
             return GetAllCore();
         }
 
+        /// <summary>
+        /// Removes a movie
+        /// </summary>
+        /// <param name="id">id of movie, must be greater than 0</param>
         public void Remove( int id )
         {
             if (id > 0)
                 RemoveCore(id);
         }
 
+        /// <summary>
+        /// Updates an already existing movie
+        /// </summary>
+        /// <param name="movie">movie to update</param>
+        /// <param name="message">error message</param>
+        /// <returns>updated movie</returns>
         public Movie Update( Movie movie, out string message )
         {
             message = "";

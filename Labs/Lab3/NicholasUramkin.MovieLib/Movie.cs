@@ -1,9 +1,9 @@
 ﻿/* Nicholas Uramkin
- * Lab 2
+ * Lab 3
  * ITSE 1430
- * 2/26/2018
+ * 3/26/2018
  * Movie.cs
- * Description: Windows Forms application that can add, edit, and remove a movie and its information.
+ * Description: Windows Forms application that can add, edit, and remove movies and their information to or from a database.
  * */
 
 using System;
@@ -15,6 +15,7 @@ namespace NicholasUramkin.MovieLib
     /// <summary>Provides information about a movie.</summary>
     public class Movie : IValidatableObject
     {
+        /// <summary>Gets or sets the movie id/// </summary>
         public int Id { get; set; }
 
         /// <summary>Gets or sets title.</summary>
@@ -37,18 +38,9 @@ namespace NicholasUramkin.MovieLib
         /// <summary>Gets or sets Owned</summary>
         public bool Owned { get; set; }
 
-        /// <summary>Validation method for Title and Length.  Title cannot be null or empty and Length must be >= 0.<returns></returns>
-        //public string Validate()
-        //{
-        //    if (String.IsNullOrEmpty(_title))
-        //        return "Title cannot be empty";
-
-        //    if (Length < 0)
-        //        return "Length must be >= 0";
-
-        //    return "";
-        //}
-
+        /// <summary>Validates the movie</summary>
+        /// <param name="validationContext">the validation context</param>
+        /// <returns>result of validation</returns>
         public IEnumerable<ValidationResult> Validate( ValidationContext validationContext )
         {
             var errors = new List<ValidationResult>();

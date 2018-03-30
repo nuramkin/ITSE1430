@@ -1,23 +1,23 @@
 ﻿/* Nicholas Uramkin
- * Lab 2
+ * Lab 3
  * ITSE 1430
- * 2/26/2018
+ * 3/26/2018
  * MovieDetailForm.cs
  * */
 
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-//using System.Data;
-//using System.Drawing;
+using System.Data;
+using System.Drawing;
 using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace NicholasUramkin.MovieLib.Windows
 {
-    /// <summary>Class for MovieDetailForm</summary>
+    /// <summary>Form to add/edit a movie</summary>
     public partial class MovieDetailForm : Form
     {
         /// <summary>MovieDetailForm default constructor</summary>
@@ -41,6 +41,7 @@ namespace NicholasUramkin.MovieLib.Windows
         /// <summary>Gets or sets Movie being edited</summary>
         public Movie Movie { get; set; }
 
+        //load event for movie
         protected override void OnLoad( EventArgs e )
         {
             base.OnLoad(e);
@@ -56,6 +57,7 @@ namespace NicholasUramkin.MovieLib.Windows
             ValidateChildren();
         }
 
+        //save event for movie
         private void OnSave( object sender, EventArgs e )
         {
             if (!ValidateChildren())

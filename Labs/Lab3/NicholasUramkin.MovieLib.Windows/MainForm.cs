@@ -1,7 +1,7 @@
 ﻿/* Nicholas Uramkin
- * Lab 2
+ * Lab 3
  * ITSE 1430
- * 2/26/2018
+ * 3/26/2018
  * MainForm.cs
  * */
 
@@ -136,14 +136,41 @@ namespace NicholasUramkin.MovieLib.Windows
 
         private Movie GetSelectedMovie()
         {
-            //get first selected row in grid, if there is one
+            //get the first selected row in grid, if there is any
             if (dataGridView1.SelectedRows.Count > 0)
                 return dataGridView1.SelectedRows[0].DataBoundItem as Movie;
 
             return null;
         }
 
-        private Movie _movie;
+        private void OnCellDoubleClick( object sender, DataGridViewCellEventArgs e )
+        {
+            var movie = GetSelectedMovie();
+            if (movie == null)
+                return;
+
+            EditMovie(movie);
+        }
+
+        private void OnCellKeyDown( object sender, KeyEventArgs e )
+        {
+            var movie = GetSelectedMovie();
+            if (movie == null)
+                return;
+
+            if(e.KeyCode == Keys.Delete)
+            {
+                e.Handled = true;
+                DeleteMovie(movie);
+            }
+            else if(e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                EditMovie(movie);
+            }
+        }
+
+        //private Movie _movie;
         private IMovieDatabase _database = new MemoryMovieDatabase();
     }
 }

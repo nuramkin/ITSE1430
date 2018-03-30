@@ -1,4 +1,10 @@
-﻿using System;
+﻿/* Nicholas Uramkin
+ * Lab 3
+ * ITSE 1430
+ * 3/26/2018
+ * MovieDatabaseExtensions.cs
+ * */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +12,15 @@ using System.Threading.Tasks;
 
 namespace NicholasUramkin.MovieLib.Data
 {
+    /// <summary>
+    /// Extension class for IMovieDatabase
+    /// </summary>
     public static class MovieDatabaseExtensions
     {
+        /// <summary>
+        /// Seeds database with sample movies for testing program
+        /// </summary>
+        /// <param name="source"></param>
         public static void Seed(this IMovieDatabase source)
         {
             var message = "";
