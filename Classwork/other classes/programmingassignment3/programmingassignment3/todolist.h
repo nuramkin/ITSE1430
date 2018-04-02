@@ -1,3 +1,10 @@
+/* Nicholas Uramkin
+   Programming Assignment 3
+   COSC 2436
+   3/30/2018
+   4:30pm Mon/Wed
+   todolist.h */
+
 #ifndef _TODOLIST_H_
 #define _TODOLIST_H_
 

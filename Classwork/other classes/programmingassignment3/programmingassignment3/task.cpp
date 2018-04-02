@@ -1,3 +1,10 @@
+/* Nicholas Uramkin
+   Programming Assignment 3
+   COSC 2436
+   3/30/2018
+   4:30pm Mon/Wed
+   task.cpp */
+
 #include "task.h"
 
 Task::Task(std::string name, int month, int day, int year, int priority, bool isCompleted) 

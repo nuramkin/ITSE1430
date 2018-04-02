@@ -23,6 +23,7 @@
     <ProjectGuid>{C7E15B42-7A86-4583-AE44-7B3BE266BF11}</ProjectGuid>
     <RootNamespace>programmingassignment3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>PA3_Nicholas_Uramkin</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -115,11 +116,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="date.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="task.cpp" />
     <ClCompile Include="todolist.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="date.h" />
     <ClInclude Include="task.h" />
     <ClInclude Include="todolist.h" />
   </ItemGroup>

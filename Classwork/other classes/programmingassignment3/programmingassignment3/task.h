@@ -1,3 +1,9 @@
+/* Nicholas Uramkin
+   Programming Assignment 3
+   COSC 2436
+   3/30/2018
+   4:30pm Mon/Wed
+   task.h */
 
 #ifndef _TASK_H_
 #define _TASK_H_

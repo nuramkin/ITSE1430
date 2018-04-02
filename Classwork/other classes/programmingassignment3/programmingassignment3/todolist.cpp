@@ -1,3 +1,9 @@
+/* Nicholas Uramkin
+   Programming Assignment 3
+   COSC 2436
+   4:30pm Mon/Wed
+   main.cpp */
+
 #include "todolist.h"
 #include <iostream>
 #include <fstream>
