@@ -14,6 +14,9 @@ namespace Nile.Data
         /// <param name="product">The product to add.</param>
         /// <param name="message">Error message.</param>
         /// <returns>The added product.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="product"/> is null.</exception>
+        /// <exception cref="ValidationException"><paramref name="product"/> is invalid.</exception>
+        /// <exception cref="Exception">A product with the same name already exists.</exception>
         /// <remarks>
         /// Returns an error if product is null, invalid or if a product
         /// with the same name already exists.
@@ -22,7 +25,7 @@ namespace Nile.Data
         {
             //Check for null
             //if (product == null)
-            //throw new ArgumentNullException(nameof(product));
+                //throw new ArgumentNullException(nameof(product));
             product = product ?? throw new ArgumentNullException(nameof(product));
 
             //Validate product 
@@ -43,7 +46,7 @@ namespace Nile.Data
             //    message = "Product already exists.";
             //    return null;
             //};
-
+            
             return AddCore(product);
         }
 
@@ -52,10 +55,11 @@ namespace Nile.Data
         public IEnumerable<Product> GetAll ()
         {
             return GetAllCore();
-        }        
+        }
 
         /// <summary>Removes a product.</summary>
         /// <param name="id">The product ID.</param>
+        /// <exception cref="ArgumentOutOfRangeException"><paramref name="id"/> is less than or equal to zero.</exception>
         public void Remove ( int id )
         {
             //Return an error if id <= 0
@@ -70,8 +74,11 @@ namespace Nile.Data
 
         /// <summary>Edits an existing product.</summary>
         /// <param name="product">The product to update.</param>
-        /// <param name="message">Error message.</param>
         /// <returns>The updated product.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="product"/> is null.</exception>
+        /// <exception cref="ValidationException"><paramref name="product"/> is invalid.</exception>
+        /// <exception cref="Exception">A product with the same name already exists.</exception>
+        /// <exception cref="ArgumentException">The product does not exist.</exception>
         /// <remarks>
         /// Returns an error if product is null, invalid, product name
         /// already exists or if the product cannot be found.

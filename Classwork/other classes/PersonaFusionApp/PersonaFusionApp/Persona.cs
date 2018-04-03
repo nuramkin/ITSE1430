@@ -8,6 +8,9 @@ namespace PersonaFusionApp
 {
     public class Persona
     {
+        //try tree view, menu strip in main menu
+
+
         public string Name { get; set; }
 
         public string Recipe { get; set; }

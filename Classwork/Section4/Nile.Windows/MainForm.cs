@@ -80,13 +80,13 @@ namespace Nile.Windows
             try
             {
                 _database.Add(null);
-            }catch (NotImplementedException)
+            } catch (NotImplementedException)
             {
                 MessageBox.Show("not implemented yet");
-            }catch (Exception ex)
+            } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            };
 
             RefreshUI();
         }
@@ -102,7 +102,7 @@ namespace Nile.Windows
                 return;
             };
 
-            EditProduct(product);
+            EditProduct(product);            
         }
 
         private void OnProductRemove( object sender, EventArgs e )
@@ -134,14 +134,13 @@ namespace Nile.Windows
                 return;
 
             //Remove product
-
             try
             {
                 _database.Remove(product.Id);
-            }catch (Exception e)
+            } catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-            }
+            };
 
             RefreshUI();
         }
@@ -159,11 +158,11 @@ namespace Nile.Windows
 
             try
             {
-                _database.Update(form.Product, out var message);
-            }catch(Exception e)
+                _database.Update(form.Product);
+            } catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-            }
+            };
 
             RefreshUI();
         }
@@ -184,10 +183,11 @@ namespace Nile.Windows
             try
             {
                 products = _database.GetAll();
-            }catch (Exception)
+            } catch (Exception)
             {
                 MessageBox.Show("Error loading products");
-            }
+            };
+
             productBindingSource.DataSource = products?.ToList();
         }
 
@@ -199,6 +199,7 @@ namespace Nile.Windows
         }
 
         private IProductDatabase _database;
+
         #endregion
     }
 }
