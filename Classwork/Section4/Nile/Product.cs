@@ -62,7 +62,7 @@ namespace Nile
         public IEnumerable<ValidationResult> Validate( ValidationContext validationContext )
         {
             var errors = new List<ValidationResult>();
-
+            
             //Name is required
             if (String.IsNullOrEmpty(_name))
                 errors.Add(new ValidationResult("Name cannot be empty", 

@@ -19,7 +19,7 @@ namespace Nile.Data.IO
         protected override Product AddCore( Product product )
         {
             EnsureInitialized();
-
+            
             product.Id = _id++;
             _items.Add(product);
 

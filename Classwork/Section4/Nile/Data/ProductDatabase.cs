@@ -54,7 +54,18 @@ namespace Nile.Data
         /// <returns>The list of products.</returns>
         public IEnumerable<Product> GetAll ()
         {
-            return GetAllCore();
+            //option 2 extension
+            //return GetAllCore()
+            //                   .OrderBy(p => p.Name)
+            //                   .ThenByDescending(p => p.Id)
+            //                   .Select(p => p);
+
+            //option 1 linq
+            return from p in GetAllCore()
+                   orderby p.Name, p.Id descending
+                   select p;
+            
+            
         }
 
         /// <summary>Removes a product.</summary>
