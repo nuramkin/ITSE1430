@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,6 @@ namespace Nile.Data.Sql
                 var cmd = new SqlCommand("AddProduct", conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add(new SqlParameter("@id", product.Id));
                 cmd.Parameters.AddWithValue("@name", product.Name);//protects from sql injection
                 cmd.Parameters.AddWithValue("@price", product.Price);
                 cmd.Parameters.AddWithValue("@description", product.Description);//preferred way
@@ -51,9 +51,6 @@ namespace Nile.Data.Sql
 
         protected override IEnumerable<Product> GetAllCore()
         {
-
-
-
             var items = new List<Product>();
 
             using (var conn = new SqlConnection(_connectionString))
@@ -62,6 +59,34 @@ namespace Nile.Data.Sql
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
                 conn.Open();
+
+                var ds = new DataSet();
+
+                var da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+
+                da.Fill(ds);
+
+                if (ds.Tables.Count == 1)
+                {
+                    foreach (var row in ds.Tables[0].Rows.OfType<DataRow>())
+                    {
+                        //send to database
+                        //row["Id"] = 10;
+                        //row.SetField("Id", 10);
+
+                        var product = new Product() {
+                            //Id = Convert.ToInt32(row["Id"]),
+                            Id = row.Field<int>("Id"),
+                            Name = row.Field<string>("Name"),
+                            Description = row.Field<string>("Description"),
+                            Price = row.Field<decimal>("Price"),
+                            IsDiscontinued = row.Field<bool>("IsDiscontinued")
+                        };
+
+                        items.Add(product);
+                    };
+                };
             };
 
             return items;
@@ -77,6 +102,12 @@ namespace Nile.Data.Sql
                 cmd.Parameters.Add(new SqlParameter("@id", id));
 
                 conn.Open();
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                        return ReadData(reader);
+                };
             };
 
             return null;
@@ -84,7 +115,37 @@ namespace Nile.Data.Sql
 
         protected override Product GetProductByNameCore( string name )
         {
-            throw new NotImplementedException();
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                var cmd = new SqlCommand("GetAllProducts", conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                conn.Open();
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var product = ReadData(reader);
+                        if (String.Compare(product.Name, name, true) == 0)
+                            return product;
+                    };
+                };
+            };
+
+            return null;
+        }
+
+        private static Product ReadData( SqlDataReader reader )
+        {
+            var product = new Product() {
+                Id = Convert.ToInt32(reader["Id"]),
+                Name = reader.GetFieldValue<string>(1),
+                Description = reader.GetString(3),
+                Price = reader.GetDecimal(2),
+                IsDiscontinued = reader.GetBoolean(4)//multiple ways of reading from database
+            };
+            return product;
         }
 
         protected override void RemoveCore( int id )
