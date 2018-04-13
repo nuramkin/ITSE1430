@@ -194,7 +194,7 @@ namespace Nile.Windows
 
             return items.Product;
 
-            return items.Product;
+            //return items.Product;
 
             //if (dataGridView1.SelectedRows.Count > 0)
             //    return dataGridView1.SelectedRows[0].DataBoundItem as Product;
