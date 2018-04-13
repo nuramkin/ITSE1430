@@ -35,12 +35,12 @@ namespace NicholasUramkin.MovieLib.Data.Sql
                 cmd.Parameters.AddWithValue("@title", movie.Title);
                 cmd.Parameters.AddWithValue("@length", movie.Length);
                 cmd.Parameters.AddWithValue("@description", movie.Description);
-                //cmd.Parameters.AddWithValue("@isOwned", movie.Owned);
-                var parm = cmd.CreateParameter();
-                parm.ParameterName = "@isOwned";
-                parm.DbType = System.Data.DbType.Boolean;
-                parm.Value = movie.Owned;
-                cmd.Parameters.Add(parm);
+                cmd.Parameters.AddWithValue("@isOwned", movie.Owned);
+                //var parm = cmd.CreateParameter();
+                //parm.ParameterName = "@isOwned";
+                //parm.DbType = System.Data.DbType.Boolean;
+                //parm.Value = movie.Owned;
+                //cmd.Parameters.Add(parm);
 
                 conn.Open();
                 var result = cmd.ExecuteScalar();
@@ -167,12 +167,12 @@ namespace NicholasUramkin.MovieLib.Data.Sql
                 cmd.Parameters.AddWithValue("@title", movie.Title);
                 cmd.Parameters.AddWithValue("@length", movie.Length);
                 cmd.Parameters.AddWithValue("@description", movie.Description);
-                //cmd.Parameters.AddWithValue("@isOwned", movie.Owned);
-                var parm = cmd.CreateParameter();
-                parm.ParameterName = "@isOwned";
-                parm.DbType = System.Data.DbType.Boolean;
-                parm.Value = movie.Owned;
-                cmd.Parameters.Add(parm);
+                cmd.Parameters.AddWithValue("@isOwned", movie.Owned);
+                //var parm = cmd.CreateParameter();
+                //parm.ParameterName = "@isOwned";
+                //parm.DbType = System.Data.DbType.Boolean;
+                //parm.Value = movie.Owned;
+                //cmd.Parameters.Add(parm);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();

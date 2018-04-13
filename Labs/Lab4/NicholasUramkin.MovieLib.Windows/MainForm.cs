@@ -48,26 +48,32 @@ namespace NicholasUramkin.MovieLib.Windows
 
         private void OnMovieAdd( object sender, EventArgs e )
         {
-            //instatiate MovieDetailForm with Add Movie in titlebar
-            var form = new MovieDetailForm("Add Movie");
+            //basically do while no exceptions 
+            //(break will only execute if there is no exception thrown)
+            do
+            {
+                //instatiate MovieDetailForm with Add Movie in titlebar
+                var form = new MovieDetailForm("Add Movie");
 
-            //show MovieDetailForm
-            var result = form.ShowDialog(this);
-            //return if OK(Save) not selected
-            if (result != DialogResult.OK)
-                return;
+                //show MovieDetailForm
+                var result = form.ShowDialog(this);
+                //return if OK(Save) not selected
+                if (result != DialogResult.OK)
+                    return;
 
-            //add to database
-            try
-            {
-                _database.Add(form.Movie);
-            } catch (NotImplementedException)
-            {
-                MessageBox.Show("Not implemented yet");
-            } catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                //add to database
+                try
+                {
+                    _database.Add(form.Movie);
+                    break;
+                } catch (NotImplementedException)
+                {
+                    MessageBox.Show("Not implemented yet");
+                } catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } while (true);
 
             //_database.Add(form.Movie, out var message);
             //if (!String.IsNullOrEmpty(message))
@@ -109,21 +115,25 @@ namespace NicholasUramkin.MovieLib.Windows
 
         private void EditMovie(Movie movie)
         {
-            var form = new MovieDetailForm(movie);
-            var result = form.ShowDialog(this);
-            if (result != DialogResult.OK)
-                return;
-
-            //update movie
-            form.Movie.Id = movie.Id;
-
-            try
+            do
             {
-                _database.Update(form.Movie);
-            } catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                var form = new MovieDetailForm(movie);
+                var result = form.ShowDialog(this);
+                if (result != DialogResult.OK)
+                    return;
+
+                //update movie
+                form.Movie.Id = movie.Id;
+
+                try
+                {
+                    _database.Update(form.Movie);
+                    break;
+                } catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            } while (true);
 
             //form.Movie.Id = movie.Id;
             //_database.Update(form.Movie, out var message);
