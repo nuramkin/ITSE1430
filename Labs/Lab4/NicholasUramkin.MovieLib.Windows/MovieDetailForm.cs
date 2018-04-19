@@ -38,6 +38,12 @@ namespace NicholasUramkin.MovieLib.Windows
             Movie = movie;
         }
 
+        public MovieDetailForm(Movie movie, string title) : this()
+        {
+            Movie = movie;
+            Text = title;
+        }
+
         /// <summary>Gets or sets Movie being edited</summary>
         public Movie Movie { get; set; }
 

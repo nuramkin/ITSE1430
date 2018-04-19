@@ -48,10 +48,7 @@ namespace NicholasUramkin.MovieLib.Windows
 
         private void OnMovieAdd( object sender, EventArgs e )
         {
-            //basically do while no exceptions 
-            //(break will only execute if there is no exception thrown)
-            do
-            {
+ 
                 //instatiate MovieDetailForm with Add Movie in titlebar
                 var form = new MovieDetailForm("Add Movie");
 
@@ -61,6 +58,12 @@ namespace NicholasUramkin.MovieLib.Windows
                 if (result != DialogResult.OK)
                     return;
 
+            var temp = form.Movie;
+
+            //basically do while no exceptions 
+            //(break will only execute if there is no exception thrown)
+            do
+            {
                 //add to database
                 try
                 {
@@ -72,6 +75,10 @@ namespace NicholasUramkin.MovieLib.Windows
                 } catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    form = new MovieDetailForm(temp, "Add Movie");
+                    result = form.ShowDialog(this);
+                    if (result != DialogResult.OK)
+                        return;
                 }
             } while (true);
 
@@ -115,15 +122,16 @@ namespace NicholasUramkin.MovieLib.Windows
 
         private void EditMovie(Movie movie)
         {
-            do
-            {
                 var form = new MovieDetailForm(movie);
                 var result = form.ShowDialog(this);
                 if (result != DialogResult.OK)
                     return;
-
+            do
+            { 
                 //update movie
                 form.Movie.Id = movie.Id;
+
+                var temp = form.Movie;
 
                 try
                 {
@@ -132,6 +140,10 @@ namespace NicholasUramkin.MovieLib.Windows
                 } catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
+                    form = new MovieDetailForm(temp);
+                    result = form.ShowDialog(this);
+                    if (result != DialogResult.OK)
+                        return;
                 }
             } while (true);
 
