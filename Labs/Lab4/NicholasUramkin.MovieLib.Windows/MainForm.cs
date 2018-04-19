@@ -1,7 +1,7 @@
 ﻿/* Nicholas Uramkin
- * Lab 3
+ * Lab 4
  * ITSE 1430
- * 3/26/2018
+ * 4/16/2018
  * MainForm.cs
  * */
 
@@ -49,15 +49,16 @@ namespace NicholasUramkin.MovieLib.Windows
         private void OnMovieAdd( object sender, EventArgs e )
         {
  
-                //instatiate MovieDetailForm with Add Movie in titlebar
-                var form = new MovieDetailForm("Add Movie");
+           //instatiate MovieDetailForm with Add Movie in titlebar
+           var form = new MovieDetailForm("Add Movie");
 
-                //show MovieDetailForm
-                var result = form.ShowDialog(this);
-                //return if OK(Save) not selected
-                if (result != DialogResult.OK)
+           //show MovieDetailForm
+           var result = form.ShowDialog(this);
+           //return if OK(Save) not selected
+           if (result != DialogResult.OK)
                     return;
-
+            
+            //temporarily store form data incase save fails
             var temp = form.Movie;
 
             //basically do while no exceptions 
@@ -69,9 +70,6 @@ namespace NicholasUramkin.MovieLib.Windows
                 {
                     _database.Add(form.Movie);
                     break;
-                } catch (NotImplementedException)
-                {
-                    MessageBox.Show("Not implemented yet");
                 } catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -81,10 +79,6 @@ namespace NicholasUramkin.MovieLib.Windows
                         return;
                 }
             } while (true);
-
-            //_database.Add(form.Movie, out var message);
-            //if (!String.IsNullOrEmpty(message))
-            //    MessageBox.Show(message);
 
             RefreshUI();
         }
@@ -146,11 +140,6 @@ namespace NicholasUramkin.MovieLib.Windows
                         return;
                 }
             } while (true);
-
-            //form.Movie.Id = movie.Id;
-            //_database.Update(form.Movie, out var message);
-            //if (!String.IsNullOrEmpty(message))
-            //    MessageBox.Show(message);
 
             RefreshUI();
         }

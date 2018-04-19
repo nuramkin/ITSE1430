@@ -1,7 +1,7 @@
 ﻿/* Nicholas Uramkin
- * Lab 3
+ * Lab 4
  * ITSE 1430
- * 3/26/2018
+ * 4/16/2018
  * ObjectValidator.cs
  * */
 using System;
@@ -24,13 +24,21 @@ namespace NicholasUramkin.MovieLib
         /// </summary>
         /// <param name="source">object being validated</param>
         /// <returns>result of validation</returns>
-        public static IEnumerable<ValidationResult> Validate (this IValidatableObject source)
+        public static IEnumerable<ValidationResult> TryValidate (this IValidatableObject source)
         {
             var context = new ValidationContext(source);
             var errors = new Collection<ValidationResult>();
             Validator.TryValidateObject(source, context, errors, true);
 
             return errors;
+        }
+
+        /// <summary>Validates an object and all of its properties</summary>
+        /// <param name="source">object being validated</param>
+        public static void Validate (this IValidatableObject source)
+        {
+            var context = new ValidationContext(source);
+            Validator.ValidateObject(source, context, true);
         }
     }
 }

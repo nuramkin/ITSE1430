@@ -1,7 +1,7 @@
 ﻿/* Nicholas Uramkin
- * Lab 3
+ * Lab 4
  * ITSE 1430
- * 3/26/2018
+ * 4/16/2018
  * IMovieDatabase.cs
  * */
 using System;

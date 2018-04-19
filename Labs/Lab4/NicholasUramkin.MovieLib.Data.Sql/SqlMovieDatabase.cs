@@ -1,4 +1,11 @@
-﻿using System;
+﻿/* Nicholas Uramkin
+ * Lab 4
+ * ITSE 1430
+ * 4/16/2018
+ * SqlMovieDatabase.cs
+ * */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,13 +15,19 @@ using System.Threading.Tasks;
 
 namespace NicholasUramkin.MovieLib.Data.Sql
 {
-
-    //TODO: doctags, including for exceptions
-
+    /// <summary>
+    /// Adds movie to SQL database
+    /// </summary>
     public class SqlMovieDatabase : MovieDatabase
     {
         private readonly string _connectionString;
 
+        /// <summary>
+        /// SqlMovieDatabase constructor (sets connection string)
+        /// </summary>
+        /// <param name="connectionString">Needed to connect to database</param>
+        /// <exception cref="ArgumentNullException"><paramref name="connectionString"/> is null.</exception>
+        /// <exception cref="ArgumentException"><paramref name="connectionString"/> is empty.</exception>
         public SqlMovieDatabase (string connectionString)
         {
             if (connectionString == null)
@@ -25,6 +38,7 @@ namespace NicholasUramkin.MovieLib.Data.Sql
             _connectionString = connectionString;
         }
 
+        //adds a movie to the database
         protected override Movie AddCore( Movie movie )
         {
             using (var conn = new SqlConnection(_connectionString))
@@ -36,11 +50,6 @@ namespace NicholasUramkin.MovieLib.Data.Sql
                 cmd.Parameters.AddWithValue("@length", movie.Length);
                 cmd.Parameters.AddWithValue("@description", movie.Description);
                 cmd.Parameters.AddWithValue("@isOwned", movie.Owned);
-                //var parm = cmd.CreateParameter();
-                //parm.ParameterName = "@isOwned";
-                //parm.DbType = System.Data.DbType.Boolean;
-                //parm.Value = movie.Owned;
-                //cmd.Parameters.Add(parm);
 
                 conn.Open();
                 var result = cmd.ExecuteScalar();
@@ -51,6 +60,7 @@ namespace NicholasUramkin.MovieLib.Data.Sql
             return movie;
         }
 
+        //gets all movies from database
         protected override IEnumerable<Movie> GetAllCore()
         {
             var items = new List<Movie>();
@@ -74,19 +84,20 @@ namespace NicholasUramkin.MovieLib.Data.Sql
                     foreach (var row in ds.Tables[0].Rows.OfType<DataRow>())
                     {
                         var movie = new Movie() {
-                            Id = row.Field<int>("Id"),
+                        Id = row.Field<int>("Id"),
                             Title = row.Field<string>("Title"),
                             Description = row.Field<string>("Description"),
                             Length = row.Field<int>("Length"),
                             Owned = row.Field<bool>("isOwned")
                         };
-                        items.Add(movie);
+                    items.Add(movie);
                     }
                 }
             }
             return items;
         }
 
+        //gets a movie from the database by id
         protected override Movie GetCore( int id )
         {
             using (var conn = new SqlConnection(_connectionString))
@@ -107,11 +118,11 @@ namespace NicholasUramkin.MovieLib.Data.Sql
             return null;
         }
 
+        //reads data from database into a movie
         private static Movie ReadData( SqlDataReader reader )
         {
             var movie = new Movie() {
                 Id = reader.GetInt32(0),
-                //Id = Convert.ToInt32(reader["Id"]),
                 Title = reader.GetString(1),
                 Length = reader.GetInt32(3),
                 Description = reader.GetString(2),
@@ -120,6 +131,7 @@ namespace NicholasUramkin.MovieLib.Data.Sql
             return movie;
         }
 
+        //gets a movie from database by its title
         protected override Movie GetMovieByTitleCore( string title )
         {
             using (var conn = new SqlConnection(_connectionString))
@@ -142,6 +154,7 @@ namespace NicholasUramkin.MovieLib.Data.Sql
             return null;
         }
 
+        //deletes movie from database
         protected override void RemoveCore( int id )
         {
             using (var conn = new SqlConnection(_connectionString))
@@ -156,6 +169,7 @@ namespace NicholasUramkin.MovieLib.Data.Sql
             }
         }
 
+        //updates/edits movie in database
         protected override Movie UpdateCore( Movie movie )
         {
             using (var conn = new SqlConnection(_connectionString))
@@ -168,11 +182,6 @@ namespace NicholasUramkin.MovieLib.Data.Sql
                 cmd.Parameters.AddWithValue("@length", movie.Length);
                 cmd.Parameters.AddWithValue("@description", movie.Description);
                 cmd.Parameters.AddWithValue("@isOwned", movie.Owned);
-                //var parm = cmd.CreateParameter();
-                //parm.ParameterName = "@isOwned";
-                //parm.DbType = System.Data.DbType.Boolean;
-                //parm.Value = movie.Owned;
-                //cmd.Parameters.Add(parm);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();

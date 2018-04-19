@@ -1,7 +1,7 @@
 ﻿/* Nicholas Uramkin
- * Lab 3
+ * Lab 4
  * ITSE 1430
- * 3/26/2018
+ * 4/16/2018
  * MemoryMovieDatabase.cs
  * */
 using System;
@@ -29,27 +29,13 @@ namespace NicholasUramkin.MovieLib.Data.Memory
 
         protected override IEnumerable<Movie> GetAllCore()
         {
-            //for each movie in list of movies
-            //foreach (var movie in _movies)
-            //{
-            //    if (movie != null)
-            //        yield return Clone(movie);
-            //}
-
             return from m in _movies
                    select Clone(m);
         }
 
-        //searches for matching id, returns null if no match
+        //gets movie by matching id, returns null if no match
         protected override Movie GetCore( int id )
         {
-            //foreach (var movie in _movies)
-            //{
-            //    if (movie.Id == id)
-            //        return movie;
-            //}
-            //return null;
-
             return (from m in _movies
                     where m.Id == id
                     select m).FirstOrDefault();
@@ -73,16 +59,9 @@ namespace NicholasUramkin.MovieLib.Data.Memory
             return movie;
         }
 
-        //searches for matching title name, returns null if no match
+        //gets movie by matching title name, returns null if no match
         protected override Movie GetMovieByTitleCore( string title )
         {
-            //foreach (var movie in _movies)
-            //{
-            //    if (String.Compare(movie.Title, title, true) == 0)
-            //        return movie;
-            //}
-            //return null;
-
             return (from m in _movies
                     where String.Compare(m.Title, title, true) == 0
                     select m).FirstOrDefault();

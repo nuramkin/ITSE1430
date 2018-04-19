@@ -1,9 +1,9 @@
 ﻿/* Nicholas Uramkin
- * Lab 3
+ * Lab 4
  * ITSE 1430
- * 3/26/2018
+ * 4/16/2018
  * Movie.cs
- * Description: Windows Forms application that can add, edit, and remove movies and their information to or from a database.
+ * Description: Windows Forms application that can add, edit, and remove movies and their information to or from a SQL database.
  * */
 
 using System;

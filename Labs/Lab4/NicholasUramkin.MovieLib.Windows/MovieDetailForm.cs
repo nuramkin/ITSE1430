@@ -1,7 +1,7 @@
 ﻿/* Nicholas Uramkin
- * Lab 3
+ * Lab 4
  * ITSE 1430
- * 3/26/2018
+ * 4/16/2018
  * MovieDetailForm.cs
  * */
 
@@ -38,6 +38,9 @@ namespace NicholasUramkin.MovieLib.Windows
             Movie = movie;
         }
 
+        /// <summary>MovieDetailForm constructor (passes in movie and string for titlebar)</summary>
+        /// <param name="movie"></param>
+        /// <param name="title"></param>
         public MovieDetailForm(Movie movie, string title) : this()
         {
             Movie = movie;
@@ -77,7 +80,7 @@ namespace NicholasUramkin.MovieLib.Windows
             movie.Owned = _chkOwned.Checked;
 
             //validate with IValidatableObject
-            var errors = ObjectValidator.Validate(movie);
+            var errors = ObjectValidator.TryValidate(movie);
             if(errors.Count() > 0)
             {
                 DisplayError(errors.ElementAt(0).ErrorMessage);
