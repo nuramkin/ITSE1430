@@ -18,7 +18,8 @@ AVLTreeNode *node(WordData key);
 		string line;
 		string word;
 		WordData wd;
-		Code203_Tree avl;
+		Code203_Tree *avl;
+        avl = new Code203_Tree();
 
 		/*avl = new Code203_Tree();
 		avl->Insert(node(1));*/
@@ -54,21 +55,20 @@ AVLTreeNode *node(WordData key);
 			//for each w in words insert WordData node into AVL tree
 			for (auto w : words)
 			{
-				//avl = new Code203_Tree();
-
+				
+                
 				wd.setWord(w.data());
 				//wd.AddLineNumber(lineNum);
 
-				avl.Insert(node(wd));
+				avl->Insert(node(wd));
 			}
 
 			words.clear();
 			lineNum++;
 		}
 
-		//avl = new Code203_Tree();
 
-		avl.PrintTree();
+		avl->PrintTree();
 
 		system("pause");
 

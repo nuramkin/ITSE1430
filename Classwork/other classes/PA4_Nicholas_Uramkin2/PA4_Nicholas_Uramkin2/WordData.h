@@ -10,11 +10,11 @@ class WordData
 {
 private:
 	std::string word;
-	int *ptr;
+	//int *ptr;
 	
 	//LinkedList line;
 
-	std::list<int> lineNums;
+	//std::list<int> lineNums;
 
 public:
 	//default constructor
@@ -29,7 +29,7 @@ public:
 	//getters
 	std::string getWord();
 
-	void AddLineNumber(int line);
+	//void AddLineNumber(int line);
 
 	void setWord(std::string word);
 

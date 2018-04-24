@@ -12,10 +12,10 @@ WordData::WordData(const WordData & wd)
 	//*ptr = *wd.ptr;
 	this->word = wd.word;
 	//lineNums = wd.lineNums;
-	for (int lineNum : wd.lineNums)
+	/*for (int lineNum : wd.lineNums)
 	{
 		lineNums.push_back(lineNum);
-	}
+	}*/
 }
 
 std::string WordData::getWord()
@@ -23,10 +23,10 @@ std::string WordData::getWord()
 	return word;
 }
 
-void WordData::AddLineNumber(int lineNum)
-{
-	lineNums.push_back(lineNum);
-}
+//void WordData::AddLineNumber(int lineNum)
+//{
+//	lineNums.push_back(lineNum);
+//}
 
 void WordData::setWord(std::string word)
 {
@@ -46,6 +46,16 @@ bool WordData::operator<(WordData & obj)
 bool WordData::operator>(WordData & obj)
 {
 	return word > obj.getWord();
+}
+
+bool WordData::operator==(WordData & obj)
+{
+    return word == obj.getWord();
+}
+
+bool WordData::operator!=(WordData & obj)
+{
+    return word != obj.getWord();
 }
 
 std::ostream & operator<<(std::ostream & os, WordData & obj)
