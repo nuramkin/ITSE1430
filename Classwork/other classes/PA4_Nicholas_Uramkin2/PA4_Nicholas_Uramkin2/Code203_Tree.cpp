@@ -331,9 +331,9 @@ void Code203_Tree::Print(AVLTreeNode *n)
 			Print(n->right);
 			cout << "Returning to Node" << n->key << " from its' right subtree\n";
 		}
-		else
+		/*else
 		{
 			cout << "\t right subtree is empty\n";
-		}
+		}*/
 	}
 }
