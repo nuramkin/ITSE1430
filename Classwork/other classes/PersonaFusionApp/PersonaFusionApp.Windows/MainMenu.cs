@@ -43,7 +43,7 @@ namespace PersonaFusionApp.Windows
                 return;
             }
 
-            var form = new PersonaDetailForm(_persona, "");
+            var form = new PersonaDetailForm(_persona, _persona.Name);
             var result = form.ShowDialog(this);
         }
 
