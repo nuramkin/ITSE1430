@@ -194,31 +194,185 @@ namespace PersonaFusionApp.Windows
                                  "Thanatos Picaro(69 / Death) x Titania(56 / Empress)\n\n"});
 
                 _personas.Add(new Persona() { Name = "Jack-o'-Lantern", Pic = Properties.Resources.PyroJack,
-                    Recipe = "" });
+                    Recipe = "\n\nQueen's Necklace (15 / Empress) x Jack Frost (11 / Magician)\n\n" +
+                                 "Nekomata(17 / Magician) x Jack Frost(11 / Magician)\n\n" +
+                                 "Koh - i - Noor(25 / Priestess) x Jack Frost(11 / Magician)\n\n"});
 
                 _personas.Add(new Persona() { Name = "Jack Frost", Pic = Properties.Resources.Jack_Frost,
-                    Recipe = "" });
+                    Recipe = "\n\nSilky(6 / Priestess) x Mandrake(3 / Death)\n\n" +
+                                 "Succubus(7 / Moon) x Pixie(2 / Lovers)\n\n" +
+                                 "Succubus(7 / Moon) x Saki Mitama(6 / Lovers)\n\n" +
+                                 "Succubus(7 / Moon) x Kelpie(6 / Strength)\n\n" +
+                                 "Regent(10 / Emperor) x Jack - o'-Lantern (2 / Magician)\n\n" +
+                                 "Kodama(11 / Star) x Arsene(1 / Fool)\n\n" +
+                                 "Berith(9 / Hierophant) x Silky(6 / Priestess)\n\n" +
+                                 "Mokoi(9 / Death) x Silky(6 / Priestess)\n\n" +
+                                 "Apsaras(11 / Priestess) x Mandrake(3 / Death)\n\n" +
+                                 "Onmoraki(12 / Moon) x Pixie(2 / Lovers)\n\n" +
+                                 "Angel(12 / Justice) x Bicorn(4 / Hermit)\n\n" +
+                                 "Onmoraki(12 / Moon) x Saki Mitama(6 / Lovers)\n\n" +
+                                 "Onmoraki(12 / Moon) x Kelpie(6 / Strength)\n\n" +
+                                 "Kodama(11 / Star) x Obariyon(8 / Fool)\n\n" +
+                                 "Apsaras(11 / Priestess) x Berith(9 / Hierophant)\n\n" +
+                                 "Apsaras(11 / Priestess) x Mokoi(9 / Death)\n\n" +
+                                 "Angel(12 / Justice) x Koropokkuru(9 / Hermit)\n\n" +
+                                 "Kusi Mitama(14 / Strength) x Succubus(7 / Moon)\n\n" +
+                                 "Kaguya(16 / Moon) x Pixie(2 / Lovers)\n\n" +
+                                 "Archangel(16 / Justice) x Bicorn(4 / Hermit)\n\n"});
 
                 _personas.Add(new Persona() { Name = "Nekomata", Pic = Properties.Resources.Nekomata,
-                    Recipe = "" });
-
+                    Recipe = "\n\nJack Frost(11 / Magician) x Regent(10 / Emperor)\n\n" +
+                                 "Kaguya(16 / Moon) x Saki Mitama(6 / Lovers)\n\n" +
+                                 "Kaguya(16 / Moon) x Kelpie(6 / Strength)\n\n" +
+                                 "Ippon - Datara(13 / Hermit) x Angel(12 / Justice)\n\n" +
+                                 "Orobas(17 / Hierophant) x Silky(6 / Priestess)\n\n" +
+                                 "Archangel(16 / Justice) x Koropokkuru(9 / Hermit)\n\n" +
+                                 "Kusi Mitama(14 / Strength) x Onmoraki(12 / Moon)\n\n" +
+                                 "High Pixie(16 / Fool) x Kodama(11 / Star)\n\n" +
+                                 "Nue(20 / Moon) x Pixie(2 / Lovers)\n\n" +
+                                 "Stone of Scone(20 / Fortune) x Jack - o'-Lantern (2 / Magician)\n\n" +
+                                 "Matador(19 / Death) x Silky(6 / Priestess)\n\n" +
+                                 "Leanan Sidhe(19 / Lovers) x Succubus(7 / Moon)\n\n" +
+                                 "Oni(19 / Strength) x Succubus(7 / Moon)\n\n" +
+                                 "Suzaku(19 / Sun) x Genbu(7 / Temperance)\n\n" +
+                                 "Orobas(17 / Hierophant) x Apsaras(11 / Priestess)\n\n" +
+                                 "Nue(20 / Moon) x Saki Mitama(6 / Lovers)\n\n" +
+                                 "Nue(20 / Moon) x Kelpie(6 / Strength)\n\n" +
+                                 "Archangel(16 / Justice) x Ippon - Datara(13 / Hermit)\n\n" +
+                                 "Sudama(17 / Hermit) x Angel(12 / Justice)\n\n" +
+                                 "Kaguya(16 / Moon) x Kusi Mitama(14 / Strength)\n\n"});
+ 
                 _personas.Add(new Persona() { Name = "Sandman", Pic = Properties.Resources.Sandman,
-                    Recipe = "" });
-
+                    Recipe = "\n\nNekomata(17 / Magician) x Regent(10 / Emperor)\n\n" +
+                                 "Stone of Scone(20 / Fortune) x Jack Frost(11 / Magician)\n\n" +
+                                 "Suzaku(19 / Sun) x Makami(15 / Temperance)\n\n" +
+                                 "Nue(20 / Moon) x Kusi Mitama(14 / Strength)\n\n" +
+                                 "Leanan Sidhe(19 / Lovers) x Kaguya(16 / Moon)\n\n" +
+                                 "Oni(19 / Strength) x Kaguya(16 / Moon)\n\n" +
+                                 "Izanagi Picaro(23 / Fool) x Kodama(11 / Star)\n\n" +
+                                 "Naga(24 / Hermit) x Angel(12 / Justice)\n\n" +
+                                 "Rakshasa(24 / Strength) x Onmoraki(12 / Moon)\n\n" +
+                                 "Anzu(25 / Hierophant) x Apsaras(11 / Priestess)\n\n" +
+                                 "Isis(26 / Priestess) x Berith(9 / Hierophant)\n\n" +
+                                 "Isis(26 / Priestess) x Mokoi(9 / Death)\n\n" +
+                                 "Nue(20 / Moon) x Leanan Sidhe(19 / Lovers)\n\n" +
+                                 "Nue(20 / Moon) x Oni(19 / Strength)\n\n" +
+                                 "Nigi Mitama(20 / Temperance) x Suzaku(19 / Sun)\n\n" +
+                                 "Sui - Ki(24 / Moon) x Kusi Mitama(14 / Strength)\n\n" +
+                                 "Fuu - Ki(23 / Star) x High Pixie(16 / Fool)\n\n" +
+                                 "Orpheus(26 / Fool) x Kodama(11 / Star)\n\n" +
+                                 "Clotho(26 / Fortune) x Apsaras(11 / Priestess)\n\n" +
+                                 "Kaguya Picaro(25 / Moon) x Kusi Mitama(14 / Strength)\n\n"});
+ 
                 _personas.Add(new Persona() { Name = "Choronzon", Pic = Properties.Resources.Choronzon,
-                    Recipe = "" });
+                    Recipe = "\n\nSandman(24 / Magician) x Regent(10 / Emperor)\n\n" +
+                                 "Stone of Scone(20 / Fortune) x Nekomata(17 / Magician)\n\n" +
+                                 "Rakshasa(24 / Strength) x Sui - Ki(24 / Moon)\n\n" +
+                                 "Isis(26 / Priestess) x Phoenix(22 / Hierophant)\n\n" +
+                                 "Black Ooze(29 / Moon) x Leanan Sidhe(19 / Lovers)\n\n" +
+                                 "Black Ooze(29 / Moon) x Oni(19 / Strength)\n\n" +
+                                 "Kaguya Picaro(25 / Moon) x Rakshasa(24 / Strength)\n\n" +
+                                 "Orpheus(26 / Fool) x Fuu - Ki(23 / Star)\n\n" +
+                                 "Ame - no - Uzume(29 / Lovers) x Nue(20 / Moon)\n\n" +
+                                 "Neko Shogun(30 / Star) x Izanagi(20 / Fool)\n\n" +
+                                 "Isis(26 / Priestess) x Anzu(25 / Hierophant)\n\n" +
+                                 "Isis(26 / Priestess) x Clotho(26 / Fortune)\n\n" +
+                                 "Zouchouten(31 / Strength) x Nue(20 / Moon)\n\n" +
+                                 "Orpheus Picaro(29 / Fool) x Fuu - Ki(23 / Star)\n\n" +
+                                 "Ame - no - Uzume(29 / Lovers) x Sui - Ki(24 / Moon)\n\n" +
+                                 "Principality(29 / Justice) x Naga(24 / Hermit)\n\n" +
+                                 "Black Ooze(29 / Moon) x Rakshasa(24 / Strength)\n\n" +
+                                 "Neko Shogun(30 / Star) x Izanagi Picaro(23 / Fool)\n\n" +
+                                 "Mothman(33 / Moon) x Leanan Sidhe(19 / Lovers)\n\n" +
+                                 "Mothman(33 / Moon) x Oni(19 / Strength)\n\n"});
 
                 _personas.Add(new Persona() { Name = "Queen Mab", Pic = Properties.Resources.QueenMab,
-                    Recipe = "" });
+                    Recipe = "\n\nChoronzon(28 / Magician) x Regent(10 / Emperor)\n\n" +
+                                 "Sandman(24 / Magician) x Stone of Scone(20 / Fortune)\n\n" +
+                                 "Neko Shogun(30 / Star) x Orpheus(26 / Fool)\n\n" +
+                                 "Ariadne(30 / Fortune) x Isis(26 / Priestess)\n\n" +
+                                 "Zouchouten(31 / Strength) x Kaguya Picaro(25 / Moon)\n\n" +
+                                 "Jatayu(32 / Tower) x Flauros(25 / Devil)\n\n" +
+                                 "Mothman(33 / Moon) x Rakshasa(24 / Strength)\n\n" +
+                                 "Ame - no - Uzume(29 / Lovers) x Black Ooze(29 / Moon)\n\n" +
+                                 "Orlov(30 / Strength) x Choronzon(28 / Magician)\n\n" +
+                                 "Kaiwan(36 / Star) x Izanagi(20 / Fool)\n\n" +
+                                 "Neko Shogun(30 / Star) x Orpheus Picaro(29 / Fool)\n\n" +
+                                 "Zouchouten(31 / Strength) x Black Ooze(29 / Moon)\n\n" +
+                                 "Kaiwan(36 / Star) x Izanagi Picaro(23 / Fool)\n\n" +
+                                 "Lachesis(34 / Fortune) x Isis(26 / Priestess)\n\n" +
+                                 "Kikuri - Hime(40 / Priestess) x Orobas(17 / Hierophant)\n\n" +
+                                 "Mithras(39 / Sun) x Nigi Mitama(20 / Temperance)\n\n" +
+                                 "Decarabia(32 / Fool) x Neko Shogun(30 / Star)\n\n" +
+                                 "Mothman(33 / Moon) x Ame - no - Uzume(29 / Lovers)\n\n" +
+                                 "Kikuri - Hime(40 / Priestess) x Matador(19 / Death)\n\n" +
+                                 "Power(41 / Justice) x Sudama(17 / Hermit)\n\n"});
 
                 _personas.Add(new Persona() { Name = "Rangda", Pic = Properties.Resources.Rangda,
-                    Recipe = "" });
+                    Recipe = "\n\nChoronzon(28 / Magician) x Stone of Scone(20 / Fortune)\n\n" +
+                                 "Queen Mab(43 / Magician) x Regent(10 / Emperor)\n\n" +
+                                 "Queen Mab(43 / Magician) x Orlov(30 / Strength)\n\n" +
+                                 "Queen Mab(43 / Magician) x Emperor's Amulet (35 / Hanged Man)\n\n" +
+                                 "Queen Mab(43 / Magician) x Hope Diamond(40 / Death)\n\n" +
+                                 "Surt(59 / Magician) x Queen's Necklace (15 / Empress)\n\n" +
+                                 "Girimehkala(44 / Moon) x Kushinada - Hime(42 / Lovers)\n\n" +
+                                 "Fortuna(46 / Fortune) x Kikuri - Hime(40 / Priestess)\n\n" +
+                                 "Magatsu - Izanagi(44 / Tower) x Pazuzu(43 / Devil)\n\n" +
+                                 "Scathach(45 / Priestess) x Daisoujou(42 / Hierophant)\n\n" +
+                                 "Scathach(45 / Priestess) x Ariadne Picaro(42 / Fortune)\n\n" +
+                                 "Valkyrie(44 / Strength) x Girimehkala(44 / Moon)\n\n" +
+                                 "Ganesha(53 / Sun) x Mithra(33 / Temperance)\n\n" +
+                                 "Byakko(49 / Temperance) x Mithras(39 / Sun)\n\n" +
+                                 "Tsukiyomi Picaro(55 / Moon) x Zouchouten(31 / Strength)\n\n" +
+                                 "Sarasvati(50 / Priestess) x Unicorn(39 / Hierophant)\n\n" +
+                                 "Sarasvati(50 / Priestess) x Atropos(39 / Fortune)\n\n" +
+                                 "Sarasvati(50 / Priestess) x Hell Biker(39 / Death)\n\n" +
+                                 "Surt(59 / Magician) x Koh - i - Noor(25 / Priestess)\n\n" +
+                                 "Koumokuten(49 / Hermit) x Power(41 / Justice)\n\n"});
 
                 _personas.Add(new Persona() { Name = "Surt", Pic = Properties.Resources.Surt,
-                    Recipe = "" });
+                    Recipe = "\n\nQueen Mab(43 / Magician) x Stone of Scone(20 / Fortune)\n\n" +
+                                 "Rangda(48 / Magician) x Regent(10 / Emperor)\n\n" +
+                                 "Rangda(48 / Magician) x Orlov(30 / Strength)\n\n" +
+                                 "Rangda(48 / Magician) x Emperor's Amulet (35 / Hanged Man)\n\n" +
+                                 "Rangda(48 / Magician) x Hope Diamond(40 / Death)\n\n" +
+                                 "Sarasvati(50 / Priestess) x Fortuna(46 / Fortune)\n\n" +
+                                 "Norn(52 / Fortune) x Scathach(45 / Priestess)\n\n" +
+                                 "Asterius(56 / Fortune) x Kikuri - Hime(40 / Priestess)\n\n" +
+                                 "Skadi(55 / Priestess) x Daisoujou(42 / Hierophant)\n\n" +
+                                 "Skadi(55 / Priestess) x Ariadne Picaro(42 / Fortune)\n\n" +
+                                 "Tsukiyomi Picaro(55 / Moon) x Kushinada - Hime(42 / Lovers)\n\n" +
+                                 "Raja Naga(55 / Temperance) x Yurlungur(42 / Sun)\n\n" +
+                                 "Byakko(49 / Temperance) x Horus(49 / Sun)\n\n" +
+                                 "Crystal Skull(50 / Fool) x Rangda(48 / Magician)\n\n" +
+                                 "Kurama Tengu(56 / Hermit) x Power(41 / Justice)\n\n" +
+                                 "Pale Rider(53 / Death) x Scathach(45 / Priestess)\n\n" +
+                                 "Tsukiyomi Picaro(55 / Moon) x Valkyrie(44 / Strength)\n\n" +
+                                 "Narcissus(50 / Lovers) x Tsukiyomi(50 / Moon)\n\n" +
+                                 "Dionysus(61 / Fool) x Kaiwan(36 / Star)\n\n" +
+                                 "Quetzalcoatl(63 / Sun) x Mithra(33 / Temperance)\n\n"});
 
                 _personas.Add(new Persona() { Name = "Futsunushi", Pic = Properties.Resources.futsunushi,
-                    Recipe = "" });
+                    Recipe = "\n\nRangda(48 / Magician) x Stone of Scone(20 / Fortune)\n\n" +
+                                 "Surt(59 / Magician) x Regent(10 / Emperor)\n\n" +
+                                 "Surt(59 / Magician) x Orlov(30 / Strength)\n\n" +
+                                 "Surt(59 / Magician) x Emperor's Amulet (35 / Hanged Man)\n\n" +
+                                 "Surt(59 / Magician) x Hope Diamond(40 / Death)\n\n" +
+                                 "Surt(59 / Magician) x Crystal Skull(50 / Fool)\n\n" +
+                                 "Forneus(63 / Hierophant) x Skadi(55 / Priestess)\n\n" +
+                                 "Quetzalcoatl(63 / Sun) x Raja Naga(55 / Temperance)\n\n" +
+                                 "Seiryu(62 / Temperance) x Yatagarasu(57 / Sun)\n\n" +
+                                 "Black Frost(67 / Fool) x Garuda(52 / Star)\n\n" +
+                                 "Belial(68 / Devil) x Seth(51 / Tower)\n\n" +
+                                 "Thanatos(65 / Death) x Skadi(55 / Priestess)\n\n" +
+                                 "Lakshmi(69 / Fortune) x Sarasvati(50 / Priestess)\n\n" +
+                                 "Thanatos Picaro(69 / Death) x Sarasvati(50 / Priestess)\n\n" +
+                                 "Siegfried(69 / Strength) x Tsukiyomi(50 / Moon)\n\n" +
+                                 "Nebiros(62 / Devil) x Black Rider(59 / Tower)\n\n" +
+                                 "Cybele(73 / Priestess) x Fortuna(46 / Fortune)\n\n" +
+                                 "Throne(71 / Justice) x Koumokuten(49 / Hermit)\n\n" +
+                                 "Bishamonten(67 / Hierophant) x Skadi(55 / Priestess)\n\n" +
+                                 "Sandalphon(75 / Moon) x Valkyrie(44 / Strength)\n\n"});
 
                 //_personas.Add(new Persona() { Name = "", Pic = Properties.Resources.,
                 //    Recipe = "" });
