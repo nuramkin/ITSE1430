@@ -38,6 +38,9 @@
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>jackfrosticon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -181,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="futsunushi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="jackfrosticon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
