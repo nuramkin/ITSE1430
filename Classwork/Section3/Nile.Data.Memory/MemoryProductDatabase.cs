@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Nile.Data.Memory
 {
@@ -11,51 +12,56 @@ namespace Nile.Data.Memory
     public class MemoryProductDatabase : ProductDatabase
     {
         /// <summary>Initializes an instance of the <see cref="MemoryProductDatabase"/> class.</summary>
-        //public MemoryProductDatabase()
-        //{
-        //    //Array version
-        //    //var prods = new Product[]
-        //    //var prods = new []
-        //    //    {
-        //    //        new Product(),
-        //    //        new Product()
-        //    //    };
+        public MemoryProductDatabase()
+        {
+            //Array version
+            //var prods = new Product[]
+            //var prods = new []
+            //    {
+            //        new Product(),
+            //        new Product()
+            //    };
 
-        //    //_products = new Product[25];
-        //    _products = new List<Product>() 
-        //    {
-        //        new Product() { Id = _nextId++, Name = "iPhone X",
-        //                        IsDiscontinued = true, Price = 1500, },
-        //        new Product() { Id = _nextId++, Name = "Windows Phone",
-        //                        IsDiscontinued = true, Price = 15, },
-        //        new Product() { Id = _nextId++, Name = "Samsung S8",
-        //                        IsDiscontinued = false, Price = 800 }
-        //    };
+            //_products = new Product[25];
+            _products = new List<Product>()
+            {
+                new Product() {
+                    Id = _nextId++, Name = "iPhone X",
+                    IsDiscontinued = true, Price = 1500, },
+                new Product() {
+                    Id = _nextId++, Name = "Windows Phone",
+                    IsDiscontinued = true, Price = 15, },
+                new Product() {
+                    Id = _nextId++, Name = "Samsung S8",
+                    IsDiscontinued = false, Price = 800
+                }
+            };
 
-        //    //var product = new Product() {
-        //    //    Id = _nextId++,
-        //    //    Name = "iPhone X",
-        //    //    IsDiscontinued = true,
-        //    //    Price = 1500,
-        //    //};
-        //    //_products.Add(product);
+            MessageBox.Show("", "");
+            //var product = new Product() {
+            //    Id = _nextId++,
+            //    Name = "iPhone X",
+            //    IsDiscontinued = true,
+            //    Price = 1500,
+            //};
+            //_products.Add(product);
 
-        //    //product = new Product() {
-        //    //    Id = _nextId++,
-        //    //    Name = "Windows Phone",
-        //    //    IsDiscontinued = true,
-        //    //    Price = 15,
-        //    //};
-        //    //_products.Add(product);
+            //product = new Product() {
+            //    Id = _nextId++,
+            //    Name = "Windows Phone",
+            //    IsDiscontinued = true,
+            //    Price = 15,
+            //};
+            //_products.Add(product);
 
-        //    //product = new Product {
-        //    //    Id = _nextId++,
-        //    //    Name = "Samsung S8",
-        //    //    IsDiscontinued = false,
-        //    //    Price = 800
-        //    //};
-        //    //_products.Add(product);
-        //}
+            //product = new Product {
+            //    Id = _nextId++,
+            //    Name = "Samsung S8",
+            //    IsDiscontinued = false,
+            //    Price = 800
+            //};
+            //_products.Add(product);
+        }
 
         /// <summary>Add a new product.</summary>
         /// <param name="product">The product to add.</param>

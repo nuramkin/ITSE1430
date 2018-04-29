@@ -31,6 +31,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,19 +59,39 @@
     <Compile Include="FoolMenu.Designer.cs">
       <DependentUpon>FoolMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MagicianMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagicianMenu.Designer.cs">
+      <DependentUpon>MagicianMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Persona.cs" />
+    <Compile Include="PersonaDatabase.cs" />
+    <Compile Include="PersonaDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonaDetailForm.Designer.cs">
+      <DependentUpon>PersonaDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FoolMenu.resx">
       <DependentUpon>FoolMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MagicianMenu.resx">
+      <DependentUpon>MagicianMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonaDetailForm.resx">
+      <DependentUpon>PersonaDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +115,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arsene.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arsene.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mainmenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Obariyon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HighPixie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Decarabia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Legion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bugs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dionysus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BlackFrost.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Vishnu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
