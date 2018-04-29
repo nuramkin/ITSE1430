@@ -55,6 +55,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonFool
@@ -104,7 +105,7 @@
             this.buttonPriestess.Name = "buttonPriestess";
             this.buttonPriestess.Size = new System.Drawing.Size(375, 23);
             this.buttonPriestess.TabIndex = 2;
-            this.buttonPriestess.Text = "Priestess";
+            this.buttonPriestess.Text = "Priestess (Not Implemented)";
             this.buttonPriestess.UseVisualStyleBackColor = false;
             // 
             // buttonEmpress
@@ -120,7 +121,7 @@
             this.buttonEmpress.Name = "buttonEmpress";
             this.buttonEmpress.Size = new System.Drawing.Size(375, 23);
             this.buttonEmpress.TabIndex = 3;
-            this.buttonEmpress.Text = "Empress";
+            this.buttonEmpress.Text = "Empress (Not Implemented)";
             this.buttonEmpress.UseVisualStyleBackColor = false;
             // 
             // buttonEmperor
@@ -136,7 +137,7 @@
             this.buttonEmperor.Name = "buttonEmperor";
             this.buttonEmperor.Size = new System.Drawing.Size(375, 23);
             this.buttonEmperor.TabIndex = 4;
-            this.buttonEmperor.Text = "Emperor";
+            this.buttonEmperor.Text = "Emperor (Not Implemented)";
             this.buttonEmperor.UseVisualStyleBackColor = false;
             // 
             // buttonHierophant
@@ -152,7 +153,7 @@
             this.buttonHierophant.Name = "buttonHierophant";
             this.buttonHierophant.Size = new System.Drawing.Size(375, 23);
             this.buttonHierophant.TabIndex = 5;
-            this.buttonHierophant.Text = "Hierophant";
+            this.buttonHierophant.Text = "Hierophant (Not Implemented)";
             this.buttonHierophant.UseVisualStyleBackColor = false;
             // 
             // buttonLovers
@@ -168,7 +169,7 @@
             this.buttonLovers.Name = "buttonLovers";
             this.buttonLovers.Size = new System.Drawing.Size(375, 23);
             this.buttonLovers.TabIndex = 6;
-            this.buttonLovers.Text = "Lovers";
+            this.buttonLovers.Text = "Lovers (Not Implemented)";
             this.buttonLovers.UseVisualStyleBackColor = false;
             // 
             // buttonChariot
@@ -184,7 +185,7 @@
             this.buttonChariot.Name = "buttonChariot";
             this.buttonChariot.Size = new System.Drawing.Size(375, 23);
             this.buttonChariot.TabIndex = 7;
-            this.buttonChariot.Text = "Chariot";
+            this.buttonChariot.Text = "Chariot (Not Implemented)";
             this.buttonChariot.UseVisualStyleBackColor = false;
             // 
             // buttonJustice
@@ -200,7 +201,7 @@
             this.buttonJustice.Name = "buttonJustice";
             this.buttonJustice.Size = new System.Drawing.Size(375, 23);
             this.buttonJustice.TabIndex = 8;
-            this.buttonJustice.Text = "Justice";
+            this.buttonJustice.Text = "Justice (Not Implemented)";
             this.buttonJustice.UseVisualStyleBackColor = false;
             // 
             // buttonHermit
@@ -216,7 +217,7 @@
             this.buttonHermit.Name = "buttonHermit";
             this.buttonHermit.Size = new System.Drawing.Size(375, 23);
             this.buttonHermit.TabIndex = 9;
-            this.buttonHermit.Text = "Hermit";
+            this.buttonHermit.Text = "Hermit (Not Implemented)";
             this.buttonHermit.UseVisualStyleBackColor = false;
             // 
             // buttonFortune
@@ -232,7 +233,7 @@
             this.buttonFortune.Name = "buttonFortune";
             this.buttonFortune.Size = new System.Drawing.Size(375, 23);
             this.buttonFortune.TabIndex = 10;
-            this.buttonFortune.Text = "Fortune";
+            this.buttonFortune.Text = "Fortune (Not Implemented)";
             this.buttonFortune.UseVisualStyleBackColor = false;
             // 
             // buttonStrength
@@ -248,7 +249,7 @@
             this.buttonStrength.Name = "buttonStrength";
             this.buttonStrength.Size = new System.Drawing.Size(375, 23);
             this.buttonStrength.TabIndex = 11;
-            this.buttonStrength.Text = "Strength";
+            this.buttonStrength.Text = "Strength (Not Implemented)";
             this.buttonStrength.UseVisualStyleBackColor = false;
             // 
             // buttonHanged
@@ -264,7 +265,7 @@
             this.buttonHanged.Name = "buttonHanged";
             this.buttonHanged.Size = new System.Drawing.Size(375, 23);
             this.buttonHanged.TabIndex = 12;
-            this.buttonHanged.Text = "Hanged";
+            this.buttonHanged.Text = "Hanged (Not Implemented)";
             this.buttonHanged.UseVisualStyleBackColor = false;
             // 
             // buttonDeath
@@ -280,7 +281,7 @@
             this.buttonDeath.Name = "buttonDeath";
             this.buttonDeath.Size = new System.Drawing.Size(375, 23);
             this.buttonDeath.TabIndex = 13;
-            this.buttonDeath.Text = "Death";
+            this.buttonDeath.Text = "Death (Not Implemented)";
             this.buttonDeath.UseVisualStyleBackColor = false;
             // 
             // buttonTemperance
@@ -296,7 +297,7 @@
             this.buttonTemperance.Name = "buttonTemperance";
             this.buttonTemperance.Size = new System.Drawing.Size(375, 23);
             this.buttonTemperance.TabIndex = 14;
-            this.buttonTemperance.Text = "Temperance";
+            this.buttonTemperance.Text = "Temperance (Not Implemented)";
             this.buttonTemperance.UseVisualStyleBackColor = false;
             // 
             // buttonDevil
@@ -312,7 +313,7 @@
             this.buttonDevil.Name = "buttonDevil";
             this.buttonDevil.Size = new System.Drawing.Size(375, 23);
             this.buttonDevil.TabIndex = 15;
-            this.buttonDevil.Text = "Devil";
+            this.buttonDevil.Text = "Devil (Not Implemented)";
             this.buttonDevil.UseVisualStyleBackColor = false;
             // 
             // buttonTower
@@ -328,7 +329,7 @@
             this.buttonTower.Name = "buttonTower";
             this.buttonTower.Size = new System.Drawing.Size(375, 23);
             this.buttonTower.TabIndex = 16;
-            this.buttonTower.Text = "Tower";
+            this.buttonTower.Text = "Tower (Not Implemented)";
             this.buttonTower.UseVisualStyleBackColor = false;
             // 
             // buttonStar
@@ -344,7 +345,7 @@
             this.buttonStar.Name = "buttonStar";
             this.buttonStar.Size = new System.Drawing.Size(375, 23);
             this.buttonStar.TabIndex = 17;
-            this.buttonStar.Text = "Star";
+            this.buttonStar.Text = "Star (Not Implemented)";
             this.buttonStar.UseVisualStyleBackColor = false;
             // 
             // buttonMoon
@@ -360,7 +361,7 @@
             this.buttonMoon.Name = "buttonMoon";
             this.buttonMoon.Size = new System.Drawing.Size(375, 23);
             this.buttonMoon.TabIndex = 18;
-            this.buttonMoon.Text = "Moon";
+            this.buttonMoon.Text = "Moon (Not Implemented)";
             this.buttonMoon.UseVisualStyleBackColor = false;
             // 
             // buttonSun
@@ -376,7 +377,7 @@
             this.buttonSun.Name = "buttonSun";
             this.buttonSun.Size = new System.Drawing.Size(375, 23);
             this.buttonSun.TabIndex = 19;
-            this.buttonSun.Text = "Sun";
+            this.buttonSun.Text = "Sun (Not Implemented)";
             this.buttonSun.UseVisualStyleBackColor = false;
             // 
             // buttonJudgement
@@ -392,7 +393,7 @@
             this.buttonJudgement.Name = "buttonJudgement";
             this.buttonJudgement.Size = new System.Drawing.Size(375, 23);
             this.buttonJudgement.TabIndex = 20;
-            this.buttonJudgement.Text = "Judgement";
+            this.buttonJudgement.Text = "Judgement (Not Implemented)";
             this.buttonJudgement.UseVisualStyleBackColor = false;
             // 
             // label1
@@ -403,7 +404,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(84, 9);
+            this.label1.Location = new System.Drawing.Point(93, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 33);
             this.label1.TabIndex = 21;
@@ -469,6 +470,18 @@
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(202, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 14);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "(Prototype)";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,6 +489,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(13)))), ((int)(((byte)(4)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(506, 826);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -545,6 +559,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label label4;
     }
 }
 

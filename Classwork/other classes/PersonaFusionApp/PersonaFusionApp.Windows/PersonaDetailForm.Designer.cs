@@ -42,7 +42,7 @@
             this.labelName.BackColor = System.Drawing.Color.Black;
             this.labelName.Font = new System.Drawing.Font("Showcard Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(24, 46);
+            this.labelName.Location = new System.Drawing.Point(44, 60);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(92, 33);
             this.labelName.TabIndex = 0;
@@ -50,24 +50,26 @@
             // 
             // labelRecipe
             // 
+            this.labelRecipe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelRecipe.AutoSize = true;
             this.labelRecipe.BackColor = System.Drawing.Color.Black;
-            this.labelRecipe.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecipe.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecipe.ForeColor = System.Drawing.Color.Transparent;
-            this.labelRecipe.Location = new System.Drawing.Point(279, 121);
+            this.labelRecipe.Location = new System.Drawing.Point(381, 74);
             this.labelRecipe.Name = "labelRecipe";
-            this.labelRecipe.Size = new System.Drawing.Size(45, 14);
+            this.labelRecipe.Size = new System.Drawing.Size(320, 15);
             this.labelRecipe.TabIndex = 3;
-            this.labelRecipe.Text = "recipe";
+            this.labelRecipe.Text = "Persona (Lvl / Arcana) x Persona (Lvl/Arcana)";
             this.labelRecipe.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(279, 107);
+            this.label1.Location = new System.Drawing.Point(381, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 14);
             this.label1.TabIndex = 4;
@@ -91,9 +93,9 @@
             // 
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox.Image = global::PersonaFusionApp.Properties.Resources.futsunushi;
-            this.pictureBox.Location = new System.Drawing.Point(12, 230);
+            this.pictureBox.Location = new System.Drawing.Point(30, 196);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(235, 288);
+            this.pictureBox.Size = new System.Drawing.Size(274, 308);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
@@ -103,16 +105,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(13)))), ((int)(((byte)(4)))));
-            this.ClientSize = new System.Drawing.Size(647, 788);
+            this.ClientSize = new System.Drawing.Size(824, 788);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelRecipe);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.labelName);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(663, 827);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(663, 827);
             this.Name = "PersonaDetailForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PersonaDetailForm";

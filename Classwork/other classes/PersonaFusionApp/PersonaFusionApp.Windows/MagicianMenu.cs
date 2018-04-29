@@ -92,5 +92,11 @@ namespace PersonaFusionApp
             var result = form.ShowDialog(this);
             Close();
         }
+
+        //back button
+        private void button10_Click( object sender, EventArgs e )
+        {
+            Close();
+        }
     }
 }

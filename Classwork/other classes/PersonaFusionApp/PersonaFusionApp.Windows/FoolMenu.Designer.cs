@@ -98,7 +98,7 @@
             this.buttonDecambria.Name = "buttonDecambria";
             this.buttonDecambria.Size = new System.Drawing.Size(431, 23);
             this.buttonDecambria.TabIndex = 3;
-            this.buttonDecambria.Text = "Decambria";
+            this.buttonDecambria.Text = "Decarabia";
             this.buttonDecambria.UseVisualStyleBackColor = false;
             this.buttonDecambria.Click += new System.EventHandler(this.buttonDecambria_Click);
             // 
