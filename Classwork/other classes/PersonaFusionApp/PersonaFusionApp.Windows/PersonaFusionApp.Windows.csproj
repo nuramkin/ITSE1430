@@ -152,5 +152,35 @@
   <ItemGroup>
     <None Include="Vishnu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="PyroJack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Jack_Frost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Nekomata.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sandman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Choronzon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QueenMab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rangda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="censored.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Surt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="futsunushi.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

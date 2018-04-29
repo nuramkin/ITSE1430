@@ -416,6 +416,7 @@
             this.textSearch.Name = "textSearch";
             this.textSearch.Size = new System.Drawing.Size(247, 20);
             this.textSearch.TabIndex = 22;
+            this.textSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnTextSearchKeyDown);
             // 
             // buttonSearch
             // 

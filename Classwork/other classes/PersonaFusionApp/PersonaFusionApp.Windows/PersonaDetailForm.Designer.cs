@@ -31,8 +31,8 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelRecipe = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,17 +73,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Fusion Combination(s):";
             // 
-            // pictureBox
-            // 
-            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox.Image = global::PersonaFusionApp.Properties.Resources.mainmenu;
-            this.pictureBox.Location = new System.Drawing.Point(12, 230);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(235, 288);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 2;
-            this.pictureBox.TabStop = false;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Black;
@@ -97,6 +86,17 @@
             this.button1.Text = "Return to Main Menu";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox.Image = global::PersonaFusionApp.Properties.Resources.futsunushi;
+            this.pictureBox.Location = new System.Drawing.Point(12, 230);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(235, 288);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 2;
+            this.pictureBox.TabStop = false;
             // 
             // PersonaDetailForm
             // 

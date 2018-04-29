@@ -103,6 +103,26 @@ namespace PersonaFusionApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap censored {
+            get {
+                object obj = ResourceManager.GetObject("censored", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Choronzon {
+            get {
+                object obj = ResourceManager.GetObject("Choronzon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Decarabia {
             get {
                 object obj = ResourceManager.GetObject("Decarabia", resourceCulture);
@@ -123,9 +143,29 @@ namespace PersonaFusionApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap futsunushi {
+            get {
+                object obj = ResourceManager.GetObject("futsunushi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HighPixie {
             get {
                 object obj = ResourceManager.GetObject("HighPixie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jack_Frost {
+            get {
+                object obj = ResourceManager.GetObject("Jack_Frost", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +193,16 @@ namespace PersonaFusionApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nekomata {
+            get {
+                object obj = ResourceManager.GetObject("Nekomata", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Obariyon {
             get {
                 object obj = ResourceManager.GetObject("Obariyon", resourceCulture);
@@ -166,6 +216,66 @@ namespace PersonaFusionApp.Properties {
         internal static System.Drawing.Bitmap Ose {
             get {
                 object obj = ResourceManager.GetObject("Ose", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PyroJack {
+            get {
+                object obj = ResourceManager.GetObject("PyroJack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QueenMab {
+            get {
+                object obj = ResourceManager.GetObject("QueenMab", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rangda {
+            get {
+                object obj = ResourceManager.GetObject("Rangda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rangda1 {
+            get {
+                object obj = ResourceManager.GetObject("Rangda1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sandman {
+            get {
+                object obj = ResourceManager.GetObject("Sandman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Surt {
+            get {
+                object obj = ResourceManager.GetObject("Surt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

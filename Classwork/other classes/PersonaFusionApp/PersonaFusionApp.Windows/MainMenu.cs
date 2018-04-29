@@ -47,10 +47,21 @@ namespace PersonaFusionApp.Windows
             var result = form.ShowDialog(this);
         }
 
+        //magician arcana button
         private void buttonMagician_Click( object sender, EventArgs e )
         {
             var form = new MagicianMenu();
             var result = form.ShowDialog(this);
+        }
+
+        //option to press enter instead of clicking "Search Persona"
+        private void OnTextSearchKeyDown( object sender, KeyEventArgs e )
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                buttonSearch_Click(sender, e);
+            }
         }
     }
 }
