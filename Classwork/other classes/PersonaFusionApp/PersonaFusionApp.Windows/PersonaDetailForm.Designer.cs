@@ -91,8 +91,9 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox.Image = global::PersonaFusionApp.Properties.Resources.futsunushi;
+            this.pictureBox.Image = global::PersonaFusionApp.Properties.Resources.mainmenu;
             this.pictureBox.Location = new System.Drawing.Point(30, 196);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(274, 308);
