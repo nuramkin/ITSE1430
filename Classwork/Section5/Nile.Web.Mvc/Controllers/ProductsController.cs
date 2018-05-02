@@ -24,7 +24,7 @@ namespace Nile.Web.Mvc.Controllers
         public ActionResult Index()
         {
             var products = _database.GetAll();
-
+            
             return View(products.Select(p => p.ToModel()));
         }
 
