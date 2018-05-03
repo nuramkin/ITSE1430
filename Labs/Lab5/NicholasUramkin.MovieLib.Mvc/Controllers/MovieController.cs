@@ -12,7 +12,6 @@ namespace NicholasUramkin.MovieLib.Mvc.Controllers
 {
     public class MovieController : Controller
     {
-        // GET: Movie
         public MovieController()
         {
             var connString = ConfigurationManager.ConnectionStrings["MovieDatabase"];
@@ -22,7 +21,7 @@ namespace NicholasUramkin.MovieLib.Mvc.Controllers
         private readonly IMovieDatabase _database;
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult List()
         {
             var movies = _database.GetAll();
             return View(movies.Select(m => m.ToModel()));
@@ -31,7 +30,8 @@ namespace NicholasUramkin.MovieLib.Mvc.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            return View();
+            //return empty movie
+            return View(new MovieViewModel());
         }
 
         [HttpPost]
@@ -45,7 +45,7 @@ namespace NicholasUramkin.MovieLib.Mvc.Controllers
 
                     movie = _database.Add(movie);
 
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction(nameof(List));
             }
             }catch(Exception e)
             {
@@ -53,6 +53,72 @@ namespace NicholasUramkin.MovieLib.Mvc.Controllers
             };
 
             return View( model);
-}
+        }
+
+        [HttpGet]
+        public ActionResult Edit( int id )
+        {
+            //query movie from database
+            var movie = _database.GetAll().FirstOrDefault(m => m.Id == id);
+
+            //if movie doest not exist return 404
+            if (movie == null)
+                return HttpNotFound();
+
+            return View(movie.ToModel());
+        }
+
+        [HttpPost]
+        public ActionResult Edit( MovieViewModel model )
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var movie = model.ToDomain();
+
+                    movie = _database.Update(movie);
+
+                    return RedirectToAction(nameof(List));
+                }
+            } catch (Exception e)
+            {
+                ModelState.AddModelError("", e.Message);
+            };
+
+            return View(model);
+        }
+
+        [HttpGet]
+        [Route("movies/delete/{id}")]
+        public ActionResult Delete( int id )
+        {
+
+            var movie = _database.GetAll().FirstOrDefault(m => m.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            return View(movie.ToModel());
+
+        }
+
+        [HttpPost]
+        public ActionResult Delete( MovieViewModel model )
+        {
+            try
+            {
+                var movie = _database.GetAll().FirstOrDefault(m => m.Id == model.Id);
+
+                _database.Remove(model.Id);
+
+                return RedirectToAction(nameof(List));
+            } catch (Exception e)
+            {
+                ModelState.AddModelError("", e.Message);
+            };
+
+            return View(model);
+        }
     }
 }
