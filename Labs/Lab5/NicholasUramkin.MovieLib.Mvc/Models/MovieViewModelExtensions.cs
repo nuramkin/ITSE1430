@@ -15,5 +15,14 @@ namespace NicholasUramkin.MovieLib.Mvc.Models
                 Owned = source.Owned,
                 Length = source.Length
             };
+
+        public static Movie ToDomain( this MovieViewModel source )
+            => new Movie() {
+                Id = source.Id,
+                Title = source.Title,
+                Description = source.Description,
+                Owned = source.Owned,
+                Length = source.Length
+            };
     }
 }

@@ -22,22 +22,37 @@ namespace NicholasUramkin.MovieLib.Mvc.Controllers
         private readonly IMovieDatabase _database;
 
         [HttpGet]
-        public ActionResult List()
+        public ActionResult Index()
         {
             var movies = _database.GetAll();
             return View(movies.Select(m => m.ToModel()));
         }
 
         [HttpGet]
-        public ActionResult Create()
+        public ActionResult Add()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Create(MovieViewModel model)
+        public ActionResult Add( MovieViewModel model )
         {
+            try
+            { 
+                if (ModelState.IsValid)
+                {
+                    var movie = model.ToDomain();
 
-        }
+                    movie = _database.Add(movie);
+
+                    return RedirectToAction(nameof(Index));
+            }
+            }catch(Exception e)
+            {
+                ModelState.AddModelError("", e.Message);
+            };
+
+            return View( model);
+}
     }
 }
