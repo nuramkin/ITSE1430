@@ -17,6 +17,9 @@ namespace NicholasUramkin.MovieLib.Mvc.Models
     /// </summary>
     public class MovieViewModel : IValidatableObject
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public int Id { get; set; }
 
         public string Description { get; set; }
@@ -30,7 +33,7 @@ namespace NicholasUramkin.MovieLib.Mvc.Models
 
         public IEnumerable<ValidationResult> Validate( ValidationContext validationContext )
         {
-            return Enumerable.Empty<ValidationResult>();
+            return new List<ValidationResult>();
         }
     }
 }
