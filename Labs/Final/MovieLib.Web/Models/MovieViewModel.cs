@@ -27,7 +27,7 @@ namespace MovieLib.Web.Models
 
         public Rating Rating { get; set; }
 
-        [Range(1900, 2100, ErrorMessage = "Year must be >= 1900 and <= 2100")]//CR3 - added range to ReleaseYear with an error message to user
+        [Range(1900, 2100, ErrorMessage = "Year must be >= 1900 and <= 2100")]//CR3 Me - added range to ReleaseYear with an error message to user
         [Display(Name = "Release Year")]
         public int ReleaseYear { get; set; }
 

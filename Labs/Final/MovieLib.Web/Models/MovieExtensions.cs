@@ -35,7 +35,7 @@ namespace MovieLib.Web.Models
                 Length = source.Length,
                 IsOwned = source.IsOwned,
                 ReleaseYear = source.ReleaseYear,
-                Rating = source.Rating//CR2 - added rating to ToViewModel
+                Rating = source.Rating//CR2 Me - added rating to ToViewModel
             };
         }
 
@@ -53,7 +53,7 @@ namespace MovieLib.Web.Models
                 Length = source.Length,
                 IsOwned = source.IsOwned,
                 ReleaseYear = source.ReleaseYear,
-                Rating = source.Rating//CR2 - added rating to ToMovie
+                Rating = source.Rating//CR2 Me - added rating to ToMovie
             };
         }
     }

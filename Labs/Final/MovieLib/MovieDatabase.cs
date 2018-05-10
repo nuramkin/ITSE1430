@@ -50,7 +50,7 @@ namespace MovieLib.Data
         public IEnumerable<Movie> GetAll ()
         {
             return from m in GetAllCore()
-                   orderby m.Title, m.Id descending
+                   orderby m.Title, m.Id descending//CR5 Me - ordered movies by title
                    select m;
         }
 
@@ -67,7 +67,7 @@ namespace MovieLib.Data
                 throw new ArgumentOutOfRangeException(nameof(id), "ID must be > 0.");
 
             var existing = GetCore(id);
-            if (existing == null)//CR4 - changed != to ==
+            if (existing == null)//CR4 Me - changed != to ==
                 return false;
 
             RemoveCore(id);
